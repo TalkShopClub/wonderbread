@@ -10,7 +10,7 @@
 <p align="center">
     <a href="https://hazyresearch.stanford.edu/wonderbread-website/">Website</a> •
     <a href="https://arxiv.org/abs/2406.13264">Paper</a> •
-    <a href="https://zenodo.org/records/12671568">Dataset</a>
+    <a href="https://zenodo.org/records/14094162">Dataset</a>
 </p>
 
 **WONDERBREAD** is a benchmark + dataset for evaluating multimodal models on business process management (BPM) tasks. Our goal is to enable enterprise applications of AI that seek to *augment* rather than *replace* human labor.
@@ -49,7 +49,7 @@ pip3 install -e .
 
 # Download the "DEBUG" version of the demos.zip file from Zenodo for quick testing, then save to /data/demos
 # If Zenodo is slow, then you can download from Google Drive using `gdown 12iJoRZXyBV4pvEsWeAKv2n61LwVbUpqo`
-wget https://zenodo.org/records/12671568/files/debug_demos.zip
+wget https://zenodo.org/records/14094162/files/debug_demos.zip
 unzip debug_demos.zip && rm debug_demos.zip
 mkdir -p data/demos && mv debug_demos/* data/demos && rm -r debug_demos/
 
@@ -90,7 +90,7 @@ docker cp $DOCKER_CONTAINER_ID:/app/wonderbread/benchmark/tasks/documentation/so
 
 <img width="1200" alt="Dataset Collection Process" src="https://github.com/HazyResearch/wonderbread/assets/5491790/98922312-7914-4a62-a569-523b4ec2b1e4">
 
-All demonstration data [can be found at this link](https://zenodo.org/records/12671568).
+All demonstration data [can be found at this link](https://zenodo.org/records/14094162).
 
 **WONDERBREAD** contains...
 
@@ -104,9 +104,9 @@ All demonstration data [can be found at this link](https://zenodo.org/records/12
 * **120 question-answer pairs** about workflow characteristics
 
 We distribute the dataset in three subsets:
-1. `demos.zip` -- [Link](https://zenodo.org/records/12671568/files/demos.zip) -- all 2,928 demonstrations in the full dataset
-2. `gold_demos.zip` -- [Link](https://zenodo.org/records/12671568/files/gold_demos.zip) -- a subset of 724 demonstrations corresponding to the 162 "Gold" tasks
-3. `debug_demos.zip` -- [Link](https://zenodo.org/records/12671568/files/debug_demos.zip) -- a subset of 24 demonstrations for quick debugging
+1. `demos.zip` -- [Link](https://zenodo.org/records/14094162/files/demos.zip) -- all 2,928 demonstrations in the full dataset
+2. `gold_demos.zip` -- [Link](https://zenodo.org/records/14094162/files/gold_demos.zip) -- a subset of 724 demonstrations corresponding to the 162 "Gold" tasks
+3. `debug_demos.zip` -- [Link](https://zenodo.org/records/14094162/files/debug_demos.zip) -- a subset of 24 demonstrations for quick debugging
 
 # 📊 Benchmark
 
