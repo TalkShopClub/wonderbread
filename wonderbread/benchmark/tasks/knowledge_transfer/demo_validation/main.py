@@ -22,6 +22,11 @@ from wonderbread.helpers import (
     get_path_to_trace_json,
 )
 from wonderbread.benchmark.tasks.helpers import string_to_random_int
+from wonderbread.benchmark.tasks.schemas import (
+    DemoCompletionResponse,
+    DemoAccuracyResponse,
+    get_json_schema,
+)
 from wonderbread.benchmark.tasks.knowledge_transfer.demo_validation.prompts import (
     prompt__validate_task_completion__intro,
     prompt__validate_task_completion__close,
@@ -66,11 +71,14 @@ def helper_task_completion(gt_trace: Dict[str, Any], task_descrip: str, model: s
     }
     # Feed (S, A, S', A', S'', A'', ...) -- i.e. all screenshots at once
     messages: List[str] = [intro_prompt] + prompt_s_a_sequence + [close_prompt]
-    pred_raw_response: str = _fetch_completion(messages, model)
+
+    # Get schema for completion validation (strict mode OK - no dynamic keys)
+    response_format = get_json_schema(DemoCompletionResponse, "demo_completion", strict=True)
+    pred_raw_response: str = _fetch_completion(messages, model, response_format=response_format)
 
     # Evaluate
     try:
-        pred_json = json.loads(pred_raw_response.replace("```json", "").replace("```", "").strip())
+        pred_json = json.loads(pred_raw_response)
         pred_rationale: Dict[str, str] = pred_json['thinking']
         pred_is_met: bool = pred_json['was_completed']
         is_correct: bool = pred_is_met == gt_is_met
@@ -152,11 +160,14 @@ def helper_task_trajectory(gt_trace: Dict[str, Any], task_descrip, model: str, s
     }
     # Feed (S, A, S', A', S'', A'', ...) -- i.e. all screenshots at once
     messages: List[str] = [intro_prompt] + prompt_s_a_sequence + [close_prompt]
-    pred_raw_response: str = _fetch_completion(messages, model)
+
+    # Get schema for accuracy validation (strict mode OK - no dynamic keys)
+    response_format = get_json_schema(DemoAccuracyResponse, "demo_accuracy", strict=True)
+    pred_raw_response: str = _fetch_completion(messages, model, response_format=response_format)
 
     # Evaluate
     try:
-        pred_json = json.loads(pred_raw_response.replace("```json", "").replace("```", "").strip())
+        pred_json = json.loads(pred_raw_response)
         pred_rationale: Dict[str, str] = pred_json['thinking']
         pred_inaccurate_steps: List[str] = pred_json.get('inaccurate_steps', [])
         pred_is_met: bool = pred_json['was_accurate'] if 'was_accurate' in pred_json else pred_json['was_acurate']

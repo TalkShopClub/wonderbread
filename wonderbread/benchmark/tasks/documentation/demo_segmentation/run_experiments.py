@@ -3,25 +3,30 @@ from wonderbread.benchmark.tasks.documentation.demo_segmentation.main import run
 
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument( "--model", type=str, default="GPT4", choices=["GPT4", "GeminiPro", "Claude3"] )
+parser.add_argument(
+    "--model",
+    type=str,
+    default="GPT4",
+    help="Model to use. Options: GPT4, GeminiPro, Claude3, or openrouter/provider/model-name"
+)
 parser.add_argument("--is_debug", action='store_true', default=False, help="If set, run in debug mode (only 3 examples)")
 args = parser.parse_args()
 
 kwarg_settings = [
-    {
-        'n_tasks' : 3, 
-        'is_td' : False,
-        'is_kf' : True,
-        'is_act' : False,
-        'is_include_sop' : False,
-    },
-    {
-        'n_tasks' : 3,
-        'is_td' : False,
-        'is_kf' : True,
-        'is_act' : False,
-        'is_include_sop' : True,
-    },
+    # {
+    #     'n_tasks' : 3,
+    #     'is_td' : False,
+    #     'is_kf' : True,
+    #     'is_act' : False,
+    #     'is_include_sop' : False,
+    # },
+    # {
+    #     'n_tasks' : 3,
+    #     'is_td' : False,
+    #     'is_kf' : True,
+    #     'is_act' : False,
+    #     'is_include_sop' : True,
+    # },
     {
         'n_tasks' : 3,
         'is_td' : True,

@@ -13,6 +13,8 @@ def run_experiment_process_demo(task):
     except Exception as e:
         print(f"====> Error in task_id={task['task_id']} | demo_folder={task['path_to_demo_folder']}")
         print(str(e))
+        import traceback
+        traceback.print_exc()
 
 def run_experiment_execute_thread(df: pd.DataFrame, 
                                     run: Callable, 

@@ -3,7 +3,6 @@ import pandas as pd
 import os
 import argparse
 import json
-import dirtyjson
 from scipy.stats import spearmanr, kendalltau
 from wonderbread.helpers import (
     _fetch_completion,
@@ -12,6 +11,10 @@ from wonderbread.helpers import (
     get_path_to_sop_txt,
     get_path_to_trace_json,
     get_rel_path,
+)
+from wonderbread.benchmark.tasks.schemas import (
+    SOPRankingResponse,
+    get_json_schema,
 )
 from wonderbread.benchmark.tasks.improvement.sop_ranking.prompts import prompt__rank_sop
 
@@ -39,10 +42,12 @@ def helper_task_completion(task_descrip: str, sops: List[str], gt_ranking: List[
         ],
     }]
 
-    pred_raw_response: str = _fetch_completion(messages, model)
+    # Get schema for SOP ranking (strict mode OK - no dynamic keys)
+    response_format = get_json_schema(SOPRankingResponse, "sop_ranking", strict=True)
+    pred_raw_response: str = _fetch_completion(messages, model, response_format=response_format)
 
     try:
-        json_dict = dirtyjson.loads(pred_raw_response.replace("```json", "").replace("```", "").strip())
+        json_dict = json.loads(pred_raw_response)
     except Exception as e:
         print(f"JSON Parsing error: {e}. Retrying...")
         # Retry

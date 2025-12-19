@@ -3,7 +3,12 @@ from wonderbread.benchmark.tasks.knowledge_transfer.demo_validation.main import 
 
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument( "--model", type=str, default="GPT4", choices=["GPT4", "GeminiPro", "Claude3"] )
+parser.add_argument(
+    "--model",
+    type=str,
+    default="GPT4",
+    help="Model to use. Options: GPT4, GeminiPro, Claude3, or openrouter/provider/model-name"
+)
 parser.add_argument("--is_debug", action='store_true', default=False, help="If set, run in debug mode (only 3 examples)")
 args = parser.parse_args()
 
@@ -12,34 +17,34 @@ kwarg_settings = [
     {
         'version' : 'task_completion',
         'is_include_sop' : True,
-        'is_td' : True, 
-        'is_kf' : True, 
-        'is_act' : False, 
+        'is_td' : True,
+        'is_kf' : True,
+        'is_act' : False,
         'n_negative_samples' : 3,
     },
-    {
-        'version' : 'task_completion',
-        'is_include_sop' : False, 
-        'is_td' : True, 
-        'is_kf' : True, 
-        'is_act' : False, 
-        'n_negative_samples' : 3,
-    },
-    {
-        'version' : 'task_completion',
-        'is_include_sop' : False, 
-        'is_td' : True, 
-        'is_kf' : True, 
-        'is_act' : False, 
-        'n_negative_samples' : 3,
-    },
+    # {
+    #     'version' : 'task_completion',
+    #     'is_include_sop' : False,
+    #     'is_td' : True,
+    #     'is_kf' : True,
+    #     'is_act' : False,
+    #     'n_negative_samples' : 3,
+    # },
+    # {
+    #     'version' : 'task_completion',
+    #     'is_include_sop' : False,
+    #     'is_td' : True,
+    #     'is_kf' : True,
+    #     'is_act' : False,
+    #     'n_negative_samples' : 3,
+    # },
     # Task trajectory
     {
         'version' : 'task_trajectory',
-        'is_include_sop' : True, 
-        'is_td' : True, 
-        'is_kf' : True, 
-        'is_act' : False, 
+        'is_include_sop' : True,
+        'is_td' : True,
+        'is_kf' : True,
+        'is_act' : False,
         'n_negative_samples' : 3,
     },
 ]

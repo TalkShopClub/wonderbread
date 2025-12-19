@@ -62,6 +62,14 @@ python3 improvement/sop_improvement/run_experiments.py --model GPT4 --is_debug
 python3 improvement/sop_ranking/run_experiments.py --model GPT4 --is_debug
 python3 knowledge_transfer/demo_validation/run_experiments.py --model GPT4 --is_debug
 python3 knowledge_transfer/question_answering/run_experiments.py --model GPT4 --is_debug
+
+# Or run ALL tasks with a single command
+cd wonderbread/benchmark
+python3 run_all_tasks.py --model GPT4 --is_debug
+
+# For OpenRouter models
+export OPENROUTER_API_KEY=<Your OpenRouter API Key>
+python3 run_all_tasks.py --model openrouter/anthropic/claude-3.5-sonnet --is_debug
 ```
 
 In order to...
@@ -154,6 +162,54 @@ All tasks can be found in `wonderbread/benchmark/tasks`.
 # ✅ Evaluation
 
 All evaluation scripts can be found in `wonderbread/benchmark/eval`.
+
+## Pre-computed Results
+
+The repository includes pre-computed experimental results from the paper in `data/experimental_results/`. You can evaluate these results immediately without running experiments.
+
+## Ground Truth Sources
+
+Different tasks use different ground truth sources:
+
+| Task | Ground Truth Source | Requires gold_demos.zip? |
+|------|-------------------|---------------------|
+| **SOP Generation** | `SOP.txt` files in demo folders | **YES** - needs gold_demos/ |
+| **Question Answering** | `data/qa_dataset.csv` | No |
+| **Demo Validation** | Synthetically generated during task execution | No |
+| **Demo Segmentation** | Synthetically generated during task execution | No |
+| **SOP Ranking** | Rankings from `data/df_rankings.csv` | No |
+| **SOP Improvement** | Synthetically degraded SOPs | No |
+
+## Running Evaluations
+
+```bash
+# Run all evaluations (skip SOP generation if you don't have gold_demos.zip)
+cd wonderbread/benchmark/eval
+python3 run_all_evals.py --skip sop_generation
+
+# Run all evaluations including SOP generation (requires gold_demos.zip)
+python3 run_all_evals.py --path_to_data_dir ../../../data/gold_demos
+
+# Skip multiple tasks
+python3 run_all_evals.py --skip sop_generation --skip demo_segmentation
+
+# Run individual evaluations
+python3 run_sop_generation.py --path_to_data_dir ../../../data/gold_demos
+python3 run_demo_segmentation.py
+python3 run_sop_improvement.py
+python3 run_sop_ranking.py
+python3 run_demo_validation.py
+python3 run_question_answering.py
+```
+
+## Downloading gold_demos.zip (Optional)
+
+Only needed if you want to evaluate SOP Generation task:
+
+```bash
+wget https://zenodo.org/records/14094162/files/gold_demos.zip
+unzip gold_demos.zip -d data/gold_demos && rm gold_demos.zip
+```
 
 # 📄 Citation
 

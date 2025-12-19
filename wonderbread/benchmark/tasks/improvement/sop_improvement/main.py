@@ -140,7 +140,9 @@ def run(path_to_demo_folder: str,
     sop_list: List[str] = improve_sop(gt_trace, task_descrip, sop, path_to_screenshots_dir, max_depth, model, is_td, is_kf, is_act, is_verbose=is_verbose)
 
     # Save to CSV
-    short_name: str = ('_td' if is_td else '') + ('_act' if is_act else '') + ('_kf' if is_kf else '') + f'__max_depth-{max_depth}' + f'__model-{model}'
+    # Sanitize model name for filesystem (replace / with _)
+    safe_model = model.replace('/', '_')
+    short_name: str = ('_td' if is_td else '') + ('_act' if is_act else '') + ('_kf' if is_kf else '') + f'__max_depth-{max_depth}' + f'__model-{safe_model}'
     path_to_output_csv: str = os.path.join(path_to_output_dir, f"self_improvement__{task_id}{short_name}.csv")
     df = pd.DataFrame([{
         'demo_name' : demo_name,

@@ -11,7 +11,8 @@ import pickle
 import random
 import time
 import openai
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import traceback
 from typing import Any, Dict, List, Optional, Tuple
 from pydrive2.auth import GoogleAuth
@@ -377,6 +378,88 @@ def _fetch_geminipro_completion(messages: List[Any], model_name: str) -> str:
     return response.text
 
 
+def _fetch_gemini_completion(messages: List[Any], model_name: str, response_format=None, **kwargs) -> str:
+    """Helper function to call Google's Gemini API using the new google.genai library.
+
+    Args:
+        messages: List of message dictionaries with 'role' and 'content'
+        model_name: Name of the Gemini model (e.g., 'gemini-2.0-flash-exp', 'gemini-1.5-pro')
+        response_format: Optional dict for structured JSON output
+        **kwargs: Additional arguments (currently unused)
+    """
+    client = genai.Client(
+        api_key=os.environ.get("GOOGLE_API_KEY"),
+        http_options={'api_version': 'v1alpha'}
+    )
+
+    # Convert messages to Gemini format using types.Content and types.Part
+    parts = []
+
+    for message in messages:
+        for content_obj in message["content"]:
+            if content_obj["type"] == "text":
+                parts.append(types.Part(text=content_obj["text"]))
+            elif content_obj["type"] == "image_url":
+                # Decode base64 image (skip "data:image/png;base64," prefix)
+                img_data = base64.b64decode(content_obj["image_url"]["url"][22:])
+                parts.append(
+                    types.Part(
+                        inline_data=types.Blob(
+                            mime_type="image/png",
+                            data=img_data,
+                        )
+                    )
+                )
+            else:
+                raise ValueError(f"Unknown content type: {content_obj['type']}")
+
+    contents = [types.Content(parts=parts)]
+
+    # Build generation config
+    generation_config = {}
+
+    # Handle structured output
+    if response_format is not None:
+        # Check if json_schema has additionalProperties (not supported by Gemini)
+        if response_format.get("type") == "json_schema":
+            schema = response_format["json_schema"]["schema"]
+            if schema.get("additionalProperties") is not None:
+                print("Warning: Gemini doesn't support additionalProperties. Falling back to json_object mode.")
+                # Change to json_object mode
+                response_format = {"type": "json_object"}
+
+        # Now process the (possibly modified) response_format
+        if response_format.get("type") == "json_schema":
+            schema = response_format["json_schema"]["schema"]
+            generation_config["response_mime_type"] = "application/json"
+            generation_config["response_schema"] = schema
+        elif response_format.get("type") == "json_object":
+            generation_config["response_mime_type"] = "application/json"
+
+    try:
+        # Generate content
+        generate_kwargs = {
+            "model": model_name,
+            "contents": contents,
+        }
+
+        if generation_config:
+            generate_kwargs["config"] = generation_config
+
+        response = client.models.generate_content(**generate_kwargs)
+
+        return response.text
+
+    except Exception as e:
+        if "quota" in str(e).lower() or "rate limit" in str(e).lower() or "exhausted" in str(e).lower():
+            print(f"Rate limit exceeded -- waiting 1 min before retrying")
+            time.sleep(60)
+            return _fetch_gemini_completion(messages, model_name, response_format=response_format, **kwargs)
+        traceback.print_exc()
+        print(f"Error calling Gemini API: {e}")
+        raise e
+
+
 def _fetch_together_completion(messages: List[Any], model_name: str) -> str:
     client = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
     response = client.chat.completions.create(
@@ -475,6 +558,84 @@ def _fetch_openai_completion(messages: List[Any], **kwargs) -> str:
     return response.choices[0].message.content
 
 
+def _fetch_openrouter_completion(messages: List[Any], model_name: str, response_format=None, **kwargs) -> str:
+    """Helper function to call OpenRouter's API using OpenAI-compatible endpoint.
+
+    Args:
+        messages: List of message dictionaries
+        model_name: Name of the model to use
+        response_format: Optional dict for structured JSON output. Format:
+            {
+                "type": "json_schema",
+                "json_schema": {
+                    "name": "schema_name",
+                    "strict": True,
+                    "schema": {...}  # Pydantic JSON schema
+                }
+            }
+        **kwargs: Additional arguments to pass to the API
+    """
+    api_key = os.environ.get("OPENROUTER_API_KEY")
+    if not api_key:
+        raise ValueError(
+            "OPENROUTER_API_KEY environment variable is required for OpenRouter models. "
+            "Please set it with your OpenRouter API key."
+        )
+
+    client = openai.OpenAI(
+        base_url="https://openrouter.ai/api/v1",
+        api_key=api_key,
+    )
+
+    completion_kwargs = {
+        "model": model_name,
+        "messages": [{"role": "system", "content": SYSTEM_PROMPT}] + messages,
+        "max_tokens": 4096,
+        **kwargs,
+    }
+
+    # Add response_format if provided
+    if response_format:
+        completion_kwargs["response_format"] = response_format
+
+    try:
+        response = client.chat.completions.create(**completion_kwargs)
+    except openai.RateLimitError:
+        print("OpenRouter rate limit exceeded -- waiting 1 min before retrying")
+        time.sleep(60)
+        return _fetch_openrouter_completion(messages, model_name, response_format=response_format, **kwargs)
+    except openai.APIError as e:
+        traceback.print_exc()
+        print(f"OpenRouter API error: {e}")
+        raise e
+    except Exception as e:
+        traceback.print_exc()
+        print(f"Unknown error: {e}")
+        raise e
+
+    # Check if response has valid structure
+    if not response or not hasattr(response, 'choices') or not response.choices:
+        print(f"Warning: Invalid response from OpenRouter API")
+        print(f"Response object: {response}")
+        # Try to get error details from response
+        if hasattr(response, 'error'):
+            print(f"API Error: {response.error}")
+
+        # If json_schema was used and we got an error, retry with json_mode
+        if response_format is not None and response_format.get("type") == "json_schema":
+            print("Retrying with json_mode instead of json_schema (may help with large/complex requests)...")
+            return _fetch_openrouter_completion(
+                messages,
+                model_name,
+                response_format={"type": "json_object"},
+                **kwargs
+            )
+
+        raise ValueError(f"OpenRouter returned invalid response for model {model_name}")
+
+    return response.choices[0].message.content
+
+
 def _fetch_completion(
     messages: List[Any], model: str, model_name: Optional[str] = None, **kwargs
 ) -> str:
@@ -484,7 +645,25 @@ def _fetch_completion(
         for message in messages
         for content in message["content"]
     )
-    if model == "GPT4":
+
+    # Check if model starts with "gemini" (use native Google library)
+    if model.lower().startswith("gemini"):
+        print(f"Using native Google Gemini library for model: {model}")
+        response: str = _fetch_gemini_completion(messages, model_name=model, **kwargs)
+    # Check if model starts with "openrouter/"
+    elif model.startswith("openrouter/"):
+        openrouter_model_name = model[len("openrouter/"):]
+        print(f"Using OpenRouter model: {openrouter_model_name}")
+        if not openrouter_model_name:
+            raise ValueError(
+                f"Invalid OpenRouter model format: '{model}'. "
+                "Expected format: 'openrouter/provider/model-name' "
+                "(e.g., 'openrouter/anthropic/claude-3.5-sonnet')"
+            )
+        response: str = _fetch_openrouter_completion(
+            messages, model_name=openrouter_model_name, **kwargs
+        )
+    elif model == "GPT4":
         if not model_name:
             model_name: str = (
                 "gpt-4-0125-preview" if not is_image else "gpt-4-vision-preview"

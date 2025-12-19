@@ -33,9 +33,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument( "path_to_input_dir", type=str, help="Path to directory containing demos" )
     parser.add_argument( "--path_to_input_csv", default=None, type=str, required=True, help="Path to input CSV file with QnA data", )
     parser.add_argument( "--path_to_output_dir", default="./outputs", type=str, required=False, help="Path to output dir to save output CSV", )
-    parser.add_argument( "--model", type=str, default="GPT4", help="Model to use for abstraction, one of [GPT4, GeminiPro, Human], \
-                        `Human` just copies the human labels provided in the input CSV file" ,
-                        choices=["GPT4", "GeminiPro", "Claude3", "Human"] )
+    parser.add_argument( "--model", type=str, default="GPT4", help="Model to use. Options: GPT4, GeminiPro, Claude3, Human, or openrouter/provider/model-name, or gemini-* models. \
+                        `Human` just copies the human labels provided in the input CSV file" )
     parser.add_argument("--is_debug", action='store_true', default=False, help="If set, run in debug mode (only 3 examples)")
 
     return parser.parse_args()

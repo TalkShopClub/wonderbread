@@ -1,6 +1,5 @@
 import collections
 import random
-import dirtyjson
 import argparse
 import json
 from typing import Any, Dict, List
@@ -14,6 +13,12 @@ from wonderbread.helpers import (
     get_path_to_screenshots_dir,
     get_path_to_sop_txt,
     get_path_to_trace_json,
+)
+from wonderbread.benchmark.tasks.helpers import string_to_random_int
+from wonderbread.benchmark.tasks.schemas import (
+    SegmentationUUIDResponse,
+    SegmentationStartEndResponse,
+    get_json_schema,
 )
 from wonderbread.benchmark.tasks.documentation.demo_segmentation.prompts import (
     prompt__intro,
@@ -150,7 +155,9 @@ def kwarg_setting_to_ablation(kwarg_setting: Dict[str, Any]) -> str:
     output_file_name += f'_same_site-{is_same_site}'
     output_file_name += f'_prompt_uuid-{is_prompt_uuid}'
     output_file_name += f'_n_trials-{n_trials}'
-    output_file_name += f'_{model}'
+    # Sanitize model name for filesystem (replace / with _)
+    safe_model = model.replace('/', '_')
+    output_file_name += f'_{safe_model}'
     return output_file_name
 
 def run(path_to_demo_folder: str, 
@@ -245,8 +252,16 @@ def run(path_to_demo_folder: str,
             }]
         }
         messages: List[str] = [intro_prompt] + merged_prompts + [close_prompt]
-        pred_raw_response: str = _fetch_completion(messages, model)
-        
+
+        # Get appropriate schema based on prompt type
+        if is_prompt_uuid:
+            response_format = get_json_schema(SegmentationUUIDResponse, "segmentation_uuid")
+        else:
+            response_format = get_json_schema(SegmentationStartEndResponse, "segmentation_start_end")
+
+        # Fetch completion with structured output
+        pred_raw_response: str = _fetch_completion(messages, model, response_format=response_format)
+
         # Logging
         if is_verbose:
             print(f"===== Trial {i+1} =====")
@@ -263,12 +278,12 @@ def run(path_to_demo_folder: str,
 
         # Evaluate
         try:
-            # Parse response
-            if '```json' in pred_raw_response:
-                pred_raw_response = pred_raw_response.split('```json')[1]
-            if '```' in pred_raw_response:
-                pred_raw_response = pred_raw_response.split('```')[0]
-            pred_json = dirtyjson.loads(pred_raw_response.replace("```json", "").replace("```", "").strip())
+            # Check if response is None
+            if pred_raw_response is None:
+                raise ValueError("Model returned None response")
+
+            # Parse response (structured output ensures valid JSON)
+            pred_json = json.loads(pred_raw_response)
             if is_prompt_uuid:
                 # Format: { "UUID_1": "A", "UUID_2": "B", ... }
                 pred_uuid_2_task_id: Dict[str, int] = pred_json

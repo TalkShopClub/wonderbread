@@ -3,23 +3,28 @@ from wonderbread.benchmark.tasks.improvement.sop_improvement.main import run
 
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument( "--model", type=str, default="GPT4", choices=["GPT4", "GeminiPro", "Claude3"] )
+parser.add_argument(
+    "--model",
+    type=str,
+    default="GPT4",
+    help="Model to use. Options: GPT4, GeminiPro, Claude3, or openrouter/provider/model-name"
+)
 parser.add_argument("--is_debug", action='store_true', default=False, help="If set, run in debug mode (only 3 examples)")
 args = parser.parse_args()
 
 kwarg_settings = [
-    {
-        'max_self_reflection_depth' : 1,
-        'is_td' : True,
-        'is_kf' : True,
-        'is_act' : False,
-    },
-    {
-        'max_self_reflection_depth' : 1,
-        'is_td' : True,
-        'is_kf' : False,
-        'is_act' : True,
-    },
+    # {
+    #     'max_self_reflection_depth' : 1,
+    #     'is_td' : True,
+    #     'is_kf' : True,
+    #     'is_act' : False,
+    # },
+    # {
+    #     'max_self_reflection_depth' : 1,
+    #     'is_td' : True,
+    #     'is_kf' : False,
+    #     'is_act' : True,
+    # },
     {
         'max_self_reflection_depth' : 1,
         'is_td' : True,

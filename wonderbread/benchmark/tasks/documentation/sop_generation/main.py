@@ -65,7 +65,9 @@ def kwarg_setting_to_ablation(kwargs: Dict[str, str]) -> str:
         short_name.append('act')
     short_name = '_'.join(short_name)
     short_name += '__pairwise' if is_pairwise else ''
-    short_name += f"__{model}"
+    # Sanitize model name for filesystem (replace / with _)
+    safe_model = model.replace('/', '_')
+    short_name += f"__{safe_model}"
     return short_name
 
 def run(path_to_demo_folder: str, 

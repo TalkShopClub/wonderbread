@@ -3,7 +3,12 @@ from wonderbread.benchmark.tasks.improvement.sop_ranking.main import run
 
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument( "--model", type=str, default="GPT4", choices=["GPT4", "GeminiPro", "Claude3"] )
+parser.add_argument(
+    "--model",
+    type=str,
+    default="GPT4",
+    help="Model to use. Options: GPT4, GeminiPro, Claude3, or openrouter/provider/model-name"
+)
 parser.add_argument("--is_debug", action='store_true', default=False, help="If set, run in debug mode (only 3 examples)")
 args = parser.parse_args()
 

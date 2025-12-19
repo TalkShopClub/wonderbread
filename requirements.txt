@@ -22,6 +22,7 @@ dirtyjson
 matplotlib
 seaborn
 google-generativeai
+google-genai
 tiktoken
 einops
 opt_einsum
