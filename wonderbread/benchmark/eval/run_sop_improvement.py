@@ -12,6 +12,7 @@ sns.set_style("whitegrid", {'axes.grid' : False})
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument( "--path_to_experimental_results_dir", type=str, default=get_rel_path(__file__, '../../../data/experimental_results'), help="Path to directory containing `all_results.csv` file for experiment", )
+    parser.add_argument( "--is_bucket_rankings_to_3", action='store_true', default=False, help="If set, bucket rankings from 1-5 to 1-3" )
     return parser.parse_args()
 
 def make_plots(df: pd.DataFrame, path_to_output_dir: str):
@@ -72,7 +73,7 @@ if __name__ == "__main__":
     args = parse_args()
     is_bucket_rankings_to_3: bool = args.is_bucket_rankings_to_3
     path_to_experimental_results_dir: str = args.path_to_experimental_results_dir
-    experiment_name: str = 'sop_ranking'
+    experiment_name: str = 'sop_improvement'
     path_to_output_dir: str = os.path.join(path_to_experimental_results_dir, experiment_name)
     os.makedirs(path_to_output_dir, exist_ok=True)
     

@@ -7,18 +7,20 @@ import os
 
 import json
 from tqdm import tqdm
-from eval_prompts import rubric_evaluation_prompt
 import openai
 import time
 import sys
 import argparse
 
-
-from workflows.helpers import (
-    encode_image,
-    convert_trace_action_to_dsl,
-    add_standard_experiment_args,
-)
+try:
+    from workflows.helpers import (
+        encode_image,
+        convert_trace_action_to_dsl,
+        add_standard_experiment_args,
+    )
+except ImportError:
+    # These imports might not be needed for basic rubric evaluation
+    pass
 
 
 def rubric_evaluation_prompt(sop: str, gold_sop: str) -> str:
@@ -87,15 +89,14 @@ def evaluate_sops_all(
     data = pd.read_csv(path_to_results)
 
     ### SELECT THE MODEL YOU WANT TO EVALUATE
+    # If you want to filter by model, uncomment one of these:
     # data = data[data["ablation--model"] == "GPT4"]
-    # data = data[data["ablation"] == "1--True--True--True--GPT4"]
     # data = data[data["ablation--model"] == "GeminiPro"]
-    # data = data[data["ablation"] == "1--True--True--True--GeminiPro"]
+    # data = data[data["ablation--model"] == "Claude3"]
 
-    model_name = "Claude3"
-
-    data = data[data["ablation--model"] == model_name]
-    data = data[data["ablation"] == f"1--True--True--True--{model_name}"]
+    # For now, evaluate all models in the CSV
+    print(f"Evaluating models: {data['ablation--model'].unique()}")
+    print(f"Evaluating ablations: {data['ablation'].unique()}")
 
     demos = []
 
@@ -189,9 +190,25 @@ def evaluate_sops_all(
         sops = pd.DataFrame(populated_entries)
 
         sops.to_csv(
-            f"{output_path}/self_improving_all_results_rubric_{model_name}.csv",
+            f"{output_path}/sop_improvement_rubric_evaluation.csv",
             index=False,
         )
+
+    # Calculate and save metrics
+    avg_original = sops['0_rubric_eval_score'].mean()
+    avg_improved = sops['1_rubric_eval_score'].mean()
+    improvement_delta = avg_improved - avg_original
+
+    metrics_path = f"{output_path}/metrics.txt"
+    with open(metrics_path, 'w') as f:
+        f.write(f"Average Original SOP Score (0_rubric_eval_score): {avg_original:.3f}\n")
+        f.write(f"Average Improved SOP Score (1_rubric_eval_score): {avg_improved:.3f}\n")
+        f.write(f"Improvement Delta: {improvement_delta:.3f}\n")
+
+    print(f"\nMetrics saved to {metrics_path}")
+    print(f"Average Original SOP Score: {avg_original:.3f}")
+    print(f"Average Improved SOP Score: {avg_improved:.3f}")
+    print(f"Improvement Delta: {improvement_delta:.3f}")
 
 
 def parse_args() -> argparse.Namespace:
@@ -233,9 +250,8 @@ if __name__ == "__main__":
     is_kf: bool = args.is_kf
     is_act: bool = args.is_act
 
-    sops: str = args.path_to_sops
-    sops = pd.read_csv(sops)
-    # read in the sops
+    path_to_sops: str = args.path_to_sops
     path_to_recordings: str = args.path_to_recordings
+    output_path: str = args.output_path
 
-    evaluate_sops_all(path_to_recordings, args.output_path)
+    evaluate_sops_all(path_to_recordings, output_path, path_to_sops)

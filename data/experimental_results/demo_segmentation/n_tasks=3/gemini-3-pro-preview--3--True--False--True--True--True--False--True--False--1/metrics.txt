@@ -1,0 +1,4 @@
+Mean adjusted_rand: 0.9962896242540866
+Std adjusted_rand: 0.021635022486222188
+Mean v_measure: 0.9961136393289053
+Std v_measure: 0.02266118211917226

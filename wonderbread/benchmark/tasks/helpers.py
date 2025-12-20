@@ -107,8 +107,8 @@ def run_experiment(run: Callable,
         df = pd.read_csv(get_rel_path(__file__, '../../../data/df_valid.csv'))
     
     if is_debug:
-        df = df.iloc[:3]
-        n_threads = 1
+        df = df.iloc[:50]
+        # n_threads = 1 
 
     # Collect results before run (in case we missed any previously)
     os.system(f'python {get_rel_path(current__file__, "collect_results.py")} {path_to_output_dir} --path_to_output_dir {path_to_output_dir}')

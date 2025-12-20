@@ -451,10 +451,23 @@ def _fetch_gemini_completion(messages: List[Any], model_name: str, response_form
         return response.text
 
     except Exception as e:
-        if "quota" in str(e).lower() or "rate limit" in str(e).lower() or "exhausted" in str(e).lower():
+        error_str = str(e).lower()
+
+        # Handle quota/rate limit errors (wait 1 min)
+        if "quota" in error_str or "rate limit" in error_str or "exhausted" in error_str:
             print(f"Rate limit exceeded -- waiting 1 min before retrying")
             time.sleep(60)
             return _fetch_gemini_completion(messages, model_name, response_format=response_format, **kwargs)
+
+        # Handle 500-series server errors (wait 15 mins and retry indefinitely)
+        if ("503" in error_str or "500" in error_str or "502" in error_str or "504" in error_str or
+            "unavailable" in error_str or "overloaded" in error_str or "server error" in error_str):
+            print(f"Server error (500-series): {e}")
+            print(f"Waiting 10 minutes before retrying...")
+            time.sleep(600)  # 10 minutes = 600 seconds
+            return _fetch_gemini_completion(messages, model_name, response_format=response_format, **kwargs)
+
+        # Other errors - print and raise
         traceback.print_exc()
         print(f"Error calling Gemini API: {e}")
         raise e

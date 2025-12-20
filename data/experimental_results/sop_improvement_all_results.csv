@@ -1,0 +1,939 @@
+demo_name,task_id,orig_sop,new_sop,n_self_reflection,ablation--max_self_reflection_depth,ablation--is_td,ablation--is_act,ablation--is_kf,ablation--model,ablation
+179 @ 2023-12-28-11-13-06,179,"Open my latest created issue that has feature in its title to check if it is closed
+1. Click the ""Issues"" icon (located directly to the right of the plus sign icon) in the top purple navigation bar.
+2. Click on the third gray tab labeled ""All"" at the top.
+3. Click the search box at the top of the page (to the right of the ""Assignee"" tag).
+4. Enter in the keyword ""feature"".
+5. Click the down arrow to the right of the search bar to open the sort by dropdown menu.
+6. From the dropdown, click on ""Created date"".
+7. Click on the first sorted search result that includes the keyword.
+8. From this page, you can find if the issue is closed.","Based on the workflow demonstration and the provided instructions, here is the updated Standard Operating Procedure. 
+
+1. Click the ""Issues"" icon (square icon with list lines, located on the right side next to the merge requests icon) in the top global navigation bar.
+2. Click on the search text field located at the top of the Issues dashboard (containing the text ""Search GitLab"" or current filters).
+3. Type the keyword ""feature"" into the search text field.
+4. Press the ""Enter"" key on your keyboard to submit the search query.
+5. Click on the sort dropdown button labeled ""Created date"" (or the current sort criteria) located above the list of issues on the right side.
+6. Click on the ""Created date"" option in the dropdown menu to ensure the list is sorted by the date created.
+7. Click on the title of the first issue in the sorted list (this corresponds to the latest created issue matching the search criteria).",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+64 @ 2023-12-27-00-12-03,64,"Which customer has placed 2 orders in the entire history?
+1. Click on ""Reports"" in the left bar of the page.
+2. Click on ""Order Count"" under the ""Customers"" tab.
+3. In the ""From"" field, click on the calendar icon.
+4. From the calendar, click on the dropdown next to the year, and select the earliest year in the list, which is ""1923"".
+5. For the month, select January from the month dropdown.
+6. For the date, select 1, the first date in January.
+7. In the ""To"" field, click on the calender icon.
+8. Click on today's date.
+9. Click on the ""Show By"" dropdown.
+10. Click on ""Year"".
+11. Click on the ""Refresh"" button next to the filter list.
+12. From the displayed information, report the customer(s) who has placed 2 orders in the entire history.","1. Click on the link labeled ""REPORTS"" in the left navigation sidebar.
+2. Click on the link labeled ""Order Count"" under the ""Customers"" section in the popup menu.
+3. Click on the calendar icon button located inside the ""From"" input field.
+4. Click on the year dropdown menu in the header of the calendar widget.
+5. Scroll to the top of the dropdown list until the year ""1923"" is visible.
+6. Click on the text labeled ""1923"" in the dropdown list.
+7. Click on the month dropdown menu in the header of the calendar widget.
+8. Click on the text labeled ""Jan"" in the dropdown list.
+9. Click on the text labeled ""1"" in the calendar grid to select the first day of the month.
+10. Click on the calendar icon button located inside the ""To"" input field.
+11. Click on the text labeled ""27"" (or the number corresponding to the current date) in the calendar grid.
+12. Click on the dropdown menu labeled ""Show By"" to the right of the date fields.
+13. Click on the option labeled ""Year"" in the dropdown menu.
+14. Click on the button labeled ""Refresh"" to update the report.
+15. Scroll up the page to view the customer data in the ""Order Count Report"" table.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+14 @ 2023-12-25-17-33-45,14,"Tell me the the number of reviews that our store received by far that mention term ""not useful""
+1. On the left bar, click on ""Marketing"".
+2. Under the ""User Content"" heading, click on ""All Reviews"".
+3. In the search box under ""Review"", type ""disappointed"".
+4. Click on ""search"".
+5. From the table shown, report the number of reviews that our store received by far that mention term ""not useful"".","1. Click on the ""Marketing"" tab located in the left sidebar.
+2. Click on the ""All Reviews"" link under the ""User Content"" section.
+3. Click on the text input field located directly below the ""Review"" column header (if the ""Review"" column is not visible, scroll the table horizontally to find it).
+4. Type ""not useful"" into the text input field.
+5. Click on the ""Search"" button located above the table.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+115 @ 2024-01-13-05-34-10,115,"Show me the name of the customers who have expressed dissatisfaction with Chloe tank
+1. Click on the “CATALOG” button in the dark gray column on the left hand side of the page.
+2. Click on “Products” in the pop up menu, located under the bolded heading “Catalog”.
+3. Click into the search box, located above the products table.
+4. Type in “Chloe tank”.
+5. Press enter.
+6. Since there were no products found, we will modify our search query.
+7. Delete “ jacket”.
+8. Press enter.
+9. Click on the product name of the relevant product. The product name is located in the “Name” column of the given row.
+10. Scroll down to the “Product Reviews” section.
+11. Click on the “Product Reviews” section to expand its contents.
+12. Scroll down to view all reviews.
+13. The reviews that express dissatisfaction can be found in this reviews table. Expressions of dissatisfaction can be found in the meaning of text in the “Title” and “Review” columns of a given row.
+14. Since a review of interest by a user with a nickname doesn’t include their full name, we will try to find this user’s full name.
+15. Click on the blue text “Edit”, located in the rightmost column of the row containing the review of interest.
+16. The user’s full name is not displayed. Hence, we will simply record their nickname, located in the box directly to the right of the bolded text “Nickname”.","Based on the provided screenshots and action log, here is the improved Standard Operating Procedure.
+
+1. Click on the button labeled ""CATALOG"" in the left sidebar navigation menu.
+2. Click on the text labeled ""Products"" under the ""Catalog"" heading in the menu that appears.
+3. Click on the text field labeled ""Search by keyword"" located above the product list.
+4. Type ""Chloe tank"" into the text field.
+5. Press the ""Enter"" key.
+6. If the search yields no results (indicated by the message ""We couldn't find any records""), delete the text "" tank"" from the ""Search by keyword"" text field.
+7. Press the ""Enter"" key.
+8. Click on the link labeled ""Chloe Compete Tank"" in the ""Name"" column of the product list.
+9. Scroll down to the section labeled ""Product Reviews"".
+10. Click on the ""Product Reviews"" section header to expand its contents.
+11. Scroll down to view the table of reviews.
+12. Click on the link labeled ""Edit"" in the ""Action"" column for the review that expresses dissatisfaction (specifically the review with the Title ""Not for non-petite"").",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+29 @ 2023-12-25-17-51-26,29,"Tell me the count of comments that have received more downvotes than upvotes for the user who made the latest post on the DIY forum.
+1. Click on the ""Forums"" tab on the top red bar.
+2. Click on the ""Alphabetical"" tab on the grey top bar.
+3. Look for DIY under ""D"".
+4. If it is found, click on ""DIY"".
+5. In the forum, click on the dropdown filter at the top.
+6. In the dropdown, click on ""New"".
+7. On the first post, click on the username which is right below the post title.
+8. Click on ""Comments"" at the top.
+9. From the given information, report the count of comments that have received more downvotes than upvotes.
+","Based on the provided screenshots and the rubric guidelines, here is the improved Standard Operating Procedure.
+
+1. Click on the link labeled ""Forums"" located in the red navigation bar at the top of the page.
+2. Click on the link labeled ""Alphabetical"" located in the grey secondary navigation bar.
+3. Scroll down the page until you find the link labeled ""DIY"" under the section labeled ""D"". (Edge case: If ""DIY"" is not immediately visible, continue scrolling down the alphabetical list).
+4. Click on the link labeled ""DIY"".
+5. Click on the sort dropdown menu labeled ""Hot"" (or the current sort selection) located above the list of submissions.
+6. Click on the option labeled ""New"" in the dropdown menu.
+7. Click on the username link (e.g., ""ziostraccette"") located in the ""Submitted by..."" text line immediately below the title of the first post.
+8. Click on the tab labeled ""Comments"" located in the user profile navigation bar.
+9. Scroll through the comment history to locate and count comments where the score (number displayed to the left of the comment) is a negative number.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+226 @ 2023-12-27-12-59-37,226,"What is the price range for products from Amazon basic?
+1. Click the blue ""Advanced Search"" button located under the larger search bar on the top right of the page.
+2. Enter ""Amazon basic"" in the ""Product Name"" box.
+3. Click the blue ""Search"" button.
+4. Select the ""Sort By"" box and click ""Price"" on the dropdown.
+5. The price under the first item (bolded text, above the blue ""Add to Cart"" button) is the lower bound of the price range.
+6. Click the up arrow (located on the right of the sort by box) to switch it to a down arrow.
+7. The price under the first item that says ""Amazon Basic in the title"" (price is in bolded text, above the blue ""Add to Cart"" button) is the upper bound of the price range.","Based on the workflow demonstration and the provided rubric, here is the updated Standard Operating Procedure.
+
+1. Click on the link labeled ""Advanced Search"" located below the search bar on the top right of the page.
+2. Click on the text field labeled ""Product Name"" within the ""Search Settings"" section.
+3. Type ""Amazon basic"" into the ""Product Name"" text field.
+4. Click on the button labeled ""Search"" located at the bottom of the ""Search Settings"" form. If the button is not visible, scroll down to find it.
+5. Click on the dropdown menu labeled ""Sort By"" located above the product grid on the right side of the page.
+6. Click on the option labeled ""Price"" in the dropdown menu. If the arrow icon located to the right of the dropdown is pointing down, click it to ensure the sort order is ascending (lowest price first).
+7. Click on the arrow icon located to the right of the ""Sort By"" dropdown menu to switch the sort order to descending (highest price first).",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+157 @ 2023-12-27-22-58-25,157,"Show all customers
+1. Click on the ""Customers"" icon on the left that looks like a person to reveal the pop-out menu.
+2. Click on ""All Customers"", which is the first option in the menu.
+3. Thus, all customers have been shown, as desired.","Here is the updated Standard Operating Procedure:
+
+1. Click on the ""CUSTOMERS"" icon located in the navigation sidebar on the left side of the screen.
+2. Click on the ""All Customers"" link located in the sub-menu that appears.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+122 @ 2024-01-13-06-01-40,122,"Tell me the reasons why customers like Olivia zip jacket
+1. Click on the “CATALOG” button in the dark gray column on the left hand side of the page.
+2. Click on “Products” in the pop up menu, located under the bolded heading “Catalog”.
+3. Click into the search box, located above the products table.
+4. Type in “Olivia zip jacket”.
+5. Press enter.
+6. Since there are no results, we will try a modified search term.
+7. Delete “ jacket”.
+8. Press enter.
+9. Since there are no results, we will try a modified search term.
+10. Delete “ zip”.
+11. Press enter.
+12. Click on the product name of the relevant product. The product name is located in the “Name” column of the given row.
+13. Scroll down to the “Product Reviews” section.
+14. Click on the “Product Reviews” section to expand its contents.
+15. Scroll down to view all reviews.
+16. The reasons why customers like the Olivia zip jacket can be found in this reviews table. Specifically, these reasons can be found in the text in the “Title” and “Review” columns of a given row.","Here is the improved Standard Operating Procedure (SOP) based on the workflow demonstration and rubric guidelines.
+
+1. Click on the ""CATALOG"" button located in the dark gray sidebar menu on the left side of the page.
+2. Click on the ""Products"" link under the ""Catalog"" heading in the pop-up menu.
+3. Click on the ""Search by keyword"" text field located above the product grid.
+4. Type ""Olivia zip jacket"".
+5. Press the ""Enter"" key.
+6. If the search returns ""0 records found"", delete the text "" zip jacket"" from the ""Search by keyword"" text field (leaving the text ""Olivia"").
+7. Press the ""Enter"" key.
+8. Click on the product name ""Olivia 1/4 Zip Light Jacket"" in the ""Name"" column of the search results.
+9. Scroll down to the ""Product Reviews"" section of the product page.
+10. Click on the ""Product Reviews"" section header to expand the content.
+11. Scroll down to the reviews table to view the customer feedback in the ""Title"" and ""Review"" columns.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+188 @ 2024-01-01-22-56-49,188,"Tell me the total cost of my latest cancelled order?
+1. On the top bar, click on ""My Account"".
+2. On the left menu, click on ""My Orders"".
+3. From the displayed table, report the total cost of my latest cancelled order.
+","1. Click on the ""My Account"" link located in the header at the top right of the page.
+2. Click on the ""My Orders"" link located in the sidebar menu on the left side of the page.
+3. Scroll through the ""My Orders"" table to find the row with the most recent date in the ""Date"" column that also has ""Canceled"" listed in the ""Status"" column. (Edge Case: If the latest cancelled order is not visible on the first page, click the pagination arrow at the bottom right of the table to view the next page).",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+156 @ 2023-12-27-12-13-15,156,"Checkout merge requests assigned to me
+1. Click on the merge requests button on the purple bar at the top right of the page. It's to the left of the checkbox icon and to the right of the issues icon.
+2. In the dropdown menu, select the ""Assigned to you"" button.
+3. You can now see the merge requests assigned to you on this page.","Based on the workflow demonstration and the provided rubric, here is the updated Standard Operating Procedure.
+
+1. Click on the ""Merge requests"" icon located on the purple navigation bar at the top right of the page, positioned between the ""Issues"" icon and the ""To-Do List"" (checkbox) icon. (If the navigation bar is not visible, scroll to the top of the page).
+2. Click on the ""Assigned to you"" link in the dropdown menu that appears. (If the link is not immediately visible, scroll down within the dropdown menu).",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+116 @ 2024-01-16-09-09-51,116,"Show me the name of the customers who have expressed dissatisfaction with tanks products?
+1. Click on the “MARKETING” button in the dark gray column on the left hand side of the page.
+2. Click on “All Reviews” in the pop up menu, located under the bolded heading “User Content”.
+3. Click into the search box below the column heading “Product”.
+4. Type in “tank”.
+5. Press enter.
+6. Since we have 27 results, which we can see above the “Created” column heading, we will make it easier for us to see all reviews by displaying them all on one page.
+7. Click on the items per page drop down button, located above the “Review” column of the review table.
+8. Select “30” from the drop down menu.
+9. Scroll down through each row of the product table.
+10. Return the names of customers dissatisfied with tank products. Each row is a separate review for a product with “tank” in its name. You can find customer names in the “Nickname” column of a given row, and you can find whether a customer is dissatisfied by analyzing the text in the “Title” and “Review” columns of a given row.","Based on the workflow demonstration and the SOP Rubric provided, here is the updated Standard Operating Procedure.
+
+1. **Click** on the link labeled ""MARKETING"" located in the dark gray navigation sidebar on the left side of the screen.
+2. **Click** on the text labeled ""All Reviews"" located under the ""User Content"" heading in the pop-up menu that appears.
+3. **Click** on the empty text field located directly below the ""Product"" column header in the specific review table.
+4. **Type** the text ""tank"" into the selected text field.
+5. **Press** the ""Enter"" key on the keyboard to filter the table results.
+6. **Click** on the ""per page"" dropdown menu (displaying a number like ""20"") located above the table grid on the right-hand side.
+7. **Click** on the number ""30"" in the dropdown list to ensure all results appear on a single page (Edge Case: If the ""Records found"" count adjacent to the dropdown is higher than 30, click a higher number like ""50"" or ""100"" instead).
+8. **Scroll** down through the table rows to view the ""Nickname"", ""Title"", and ""Review"" columns to identify customers expressing dissatisfaction.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+117 @ 2023-12-31-23-34-18,117,"What is the date when I made my first purchase on this site?
+1. Click on the blue ""My Account"" button on the top right of the screen.
+2. On the left gray sidebar, click ""My Orders"".
+3. Click the blue number ""4"" that is at the bottom of the page to go to the last page.
+4. Look at the date of the last row. This is the date of the first purchase you made on the site.","Based on the observation of the workflow and the requirements of the SOP Rubric, here is the updated Standard Operating Procedure.
+
+1. **Click** on the ""My Account"" link located in the header navigation menu at the top right of the screen.
+2. **Click** on the ""My Orders"" link located in the account sidebar menu on the left side of the screen.
+3. **Scroll** to the bottom of the ""My Orders"" page to locate the pagination controls under the list of orders. (If the list is short and no pagination is visible, proceed to the next step).
+4. **Click** on the text labeled with the highest page number in the pagination controls to navigate to the last page of orders. (If the last page number is not immediately visible, **Click** on the ""Next"" arrow icon until you reach the final page).
+5. **Scroll** to the bottom of the order table to view the date listed in the last row, which corresponds to the first purchase made on the site.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+216 @ 2023-12-31-16-12-31,216,"What are the key aspects that the customers don't like about Electra Bra Top?
+1. Click on the ""Marketing"" icon on the gray sidebar on the left side of the screen.
+2. Click on ""All Reviews"" in the submenu under the ""User Content"" heading.
+3. In the empty text box under the ""Product"" column, type in the keyword ""electra"".
+4. Press enter to search.
+5. Look at the reviews under the ""Review"" column to answer the question.","1. Click on the ""MARKETING"" button located in the sidebar on the left side of the screen.
+2. Click on the ""All Reviews"" link under the ""User Content"" section (scroll down the menu if the link is not visible).
+3. Click on the text field located directly below the ""Product"" column header (scroll horizontally to the right if the column is not visible).
+4. Type the text ""electra"" into the text field.
+5. Press the ""Enter"" key on the keyboard.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+127 @ 2024-01-08-19-59-09,127,"What brands appear most frequently among the top search terms?
+1. Click on 'REPORTS' in the left sidebar.
+2. Click on 'Search Terms' under 'Marketing'.
+3. Click on the 'Hits' column heading to sort search terms by hits.
+4. Report the most frequently appearing brands from this table.
+","Based on the provided screenshots and the SOP Rubric, here is the updated Standard Operating Procedure. 
+
+1. Click on the ""REPORTS"" menu item located in the left-hand sidebar navigation.
+2. Click on the ""Search Terms"" link located under the ""Marketing"" section in the Reports menu panel.
+3. Click on the ""Hits"" column header located in the ""Search Terms Report"" table to sort the data.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+45 @ 2024-01-08-14-51-24,45,"Check out the most recent open issues
+1. Click on 'Issues' in the left sidebar.
+2. Click on the 'Created date' dropdown button on the top right.
+3. Click on 'Created date' in the dropdown list to sort issues with most recent first.
+","1. Click on the **'Issues'** link located in the **left sidebar navigation menu**. (Edge Case: If the text 'Issues' is not visible, ensure the sidebar is expanded or look for the corresponding icon).
+2. Click on the **sort dropdown button** (labeled 'Created date' in the demonstration) located in the **toolbar above the issues list**, to the right of the search bar. (Edge Case: The button label reflects the current sort order; if the button is labeled differently, such as 'Updated date', click it to reveal the sorting options).
+3. Click on the **'Created date'** option located in the **dropdown menu**.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+171 @ 2023-12-31-01-42-52,171,"Tell me the full names of the repositories where I made contributions and they got less than 5 stars?
+1. On the filter menu under the top bar, click on the dropdown on the right of the ""Filter By Name"" box.
+2. Click on ""Most Stars"" under the ""Sort By"" sub-menu.
+3. Scroll down, and click on the ""Next"" button at the bottom of the list till the end of the list is displayed.
+4. From the displayed information, report the full names of the repositories where I made contributions and they got less than 5 stars.","Based on the workflow demonstration and the provided SOP Rubric, here is the improved Standard Operating Procedure. 
+
+The original SOP contained steps with multiple actions (violating the Discrete Action rule), lacked precise element locations for some steps (Element Specification), and included a reporting step that is not a valid UI action (Action Type). The updated SOP resolves these issues.
+
+1. Click on the sort dropdown menu located to the right of the ""Filter by name"" text field.
+2. Click on the ""Most stars"" option in the ""Sort by"" dropdown menu.
+3. Scroll down to the bottom of the page to view the list of repositories and their star counts.
+4. If the list is paginated and the ""Next"" button is visible, click on the ""Next"" button in the pagination controls at the bottom of the page.
+5. Scroll down to the bottom of the page to view the remaining repositories.
+6. Scroll through the displayed list to identify the names of repositories with less than 5 stars.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+79 @ 2023-12-27-22-50-34,79,"What is the total count of Not Approved reviews amongst all the reviews?
+1. Click on the ""Marketing"" icon on the left to reveal the pop-out menu.
+2. Click on ""All Reviews"" under the ""User Content"" section on the bottom right of the menu.
+3. Click on the dropdown at the top of the fourth column for ""Status"".
+4. From the dropdown, click on ""Not Approved"".
+5. Click the gray ""Search"" button located at the top left.
+6. Given the information, state the total count of Not Approved reviews amongst all the reviews.","Based on the workflow demonstration and the provided rubric, here is the improved Standard Operating Procedure.
+
+1. Click on the ""Marketing"" icon located in the left sidebar navigation menu.
+2. Click on the ""All Reviews"" link under the ""User Content"" section of the pop-out menu.
+3. Click on the filter input field located in the ""Status"" column of the table header row.
+4. Click on the ""Not Approved"" option in the dropdown menu.
+5. Click on the ""Search"" button located above the table to apply the filter.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+205 @ 2023-12-30-13-02-59,205,"How many commits did kilian make on 3/5/2023?
+1. Click on the ""Commits"" button just underneath the project title.
+2. Given the information, state how many commits kilian made on 3/5/2023.","1. Click on the link displaying the number of commits (e.g., ""2,320 Commits"") located immediately below the project title ""a11yproject.com"" in the project header section.
+2. Scroll down the list of commits until the section corresponding to the date ""05 Mar, 2023"" is visible.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+131 @ 2024-01-13-06-11-26,131,"What's the total number of items sold in the most recent 7 orders?
+1. Click on the “REPORTS” button in the dark gray column on the left hand side of the page.
+2. Click on “Orders” in the pop up menu, located under the heading “Sales”.
+3. Click into the “From” text field, located on the left side of the page.
+4. Type in “1/1/23”.
+5. Click into the “To” text field, located directly to the right of the “From” text field.
+6. Type in the current date.
+7. Click on the orange button “Show Report”, located at the top right of the page.
+8. Scroll to the bottom of the page.
+9. The sum of numbers in the “Sales Items” column, the third column of the table, for the 8th, 7th, 6th, 5th, 4th, 3rd, and 2nd to last rows is the total number of items sold in the most recent 7 orders.","Based on the provided screenshots and workflow demonstration, here is the improved Standard Operating Procedure.
+
+1. Click on the icon labeled ""REPORTS"" in the sidebar navigation menu on the left side of the screen.
+2. Click on the link labeled ""Orders"" located under the ""Sales"" heading in the menu that appears.
+    *   *Edge Case:* If the menu closes before you can click ""Orders"", click ""REPORTS"" again to reopen it.
+3. Click on the text field labeled ""From"" in the ""Filter"" section on the left side of the page.
+4. Type ""1/1/23"" into the ""From"" text field.
+5. Click on the text field labeled ""To"" located directly to the right of the ""From"" text field in the ""Filter"" section.
+6. Type ""1/13/24"" into the ""To"" text field.
+7. Click on the orange button labeled ""Show Report"" located in the top right corner of the page.
+    *   *Edge Case:* If the report data does not refresh, ensure the date format matches the placeholder (M/D/YY) and try again.
+8. Scroll to the bottom of the page to view the ""Orders Report"" table.
+    *   *Edge Case:* If the table is empty, broaden the date range in the ""From"" and ""To"" fields to include more past dates.
+9. The total number of items sold in the most recent 7 orders is found by summing the values in the ""Sales Items"" column (3rd column) for the last 7 rows in the table (excluding the final row labeled ""Total"").
+    *   *Edge Case:* If the ""Orders"" column (2nd column) displays a value greater than 1 for any row, count rows from the bottom upwards until exactly 7 orders are accounted for, rather than simply selecting 7 rows.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+143 @ 2024-01-08-01-57-37,143,"How much I spent on home decoration shopping during 1/29/2023
+1. Click on the blue text ""My Account"" at the top of the page.
+2. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+3. Scroll down to the next page button for the order table, located directly below the order table and to the right of the page numbers.
+4. Click the next page button.
+5. Click the blue text “View Order” in the “Action” column of the row for the order placed on 1/29/2023.
+6. Scroll through all order items.
+7. Add to the total money spent the cost of items related to home decoration.","Based on the workflow demonstration and the provided rubric, here is the improved Standard Operating Procedure.
+
+1. Click on the link labeled ""My Account"" located in the header at the top right of the page.
+2. Click on the link labeled ""My Orders"" located in the vertical navigation menu on the left side of the page.
+3. Scroll to the bottom of the ""My Orders"" table to locate the order dated ""1/29/23"".
+4. If the order dated ""1/29/23"" is not visible on the current page, Click on the ""Next"" page button (right-facing arrow icon) located directly below the table to the right of the page numbers. (Note: Repeat this step until the order is found).
+5. Click on the text labeled ""View Order"" in the ""Action"" column for the row corresponding to the date ""1/29/23"".
+6. Scroll down to the ""Items Ordered"" section to view the ""Product Name"" and ""Price"" columns to identify home decoration items and their costs.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+106 @ 2023-12-30-12-35-44,106,"Display the list of issues in the umano/AndroidSlidingUpPanel repository that have labels related to BUG
+1. Click the ""Explore"" tab under the bold ""Projects"" title.
+2. Click in the ""Filter by name"" box in the top right.
+3. Type in the text ""Android"".
+4. From the results below, click on the desired repository ""Umano: News Read To You / AndroidSlidingUpPanel"".
+5. Click the ""Issues"" tab on the left.
+6. Click in the ""Search"" bar at the top of the page.
+7. From the dropdown that appears, click on the fourth option ""Label"".
+8. Click the equals sign ""="".
+9. Type the keyword ""BUG"".
+10. From the autocomplete menu click on the red ""BUG"" label.
+11. Press the ""Enter/Return"" key to show the results.
+12. Thus, the list of issues in the umano/AndroidSlidingUpPanel repository that have labels related to BUG is displayed.","1. Click on the ""Explore"" tab located under the ""Projects"" header.
+2. Click on the text field labeled ""Filter by name"" located in the top right corner of the page.
+3. Type the text ""Android"" into the ""Filter by name"" text field.
+4. Press the ""Enter"" key on the keyboard.
+5. Click on the repository link labeled ""Umano: News Read To You / AndroidSlidingUpPanel"". (Edge Case: If the repository is not visible, scroll down the page to find the row containing the order).
+6. Click on the ""Issues"" tab located in the sidebar on the left side of the screen.
+7. Click on the text field labeled ""Search or filter results..."" located at the top of the main content area.
+8. Click on the option labeled ""Label"" in the dropdown menu that appears.
+9. Click on the ""="" (equals sign) option in the dropdown menu.
+10. Type the text ""BUG"" into the search text field.
+11. Click on the red label option labeled ""BUG"" in the dropdown menu.
+12. Press the ""Enter"" key on the keyboard.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+69 @ 2024-01-05-04-25-33,69,"Among the top 10 post in ""books"" forum, is there any post talks about supporting local book stores? If so, tell me the organizations involved
+1. Click on the ""Forums"" button on the red header on the top of the page
+2. Click on the ""Alphabetical"" sub-header at the top-left of the ""List of forums"" page
+3. Locate the ""B"" section denoting forums that start with the letter ""B"" and click on the red ""books"" text
+4. Locate the dropdown menu at the top of the page labeled ""Hot"" and change it to ""Top"" -- this will reveal another dropdown menu to its right
+5. Locate the rightmost dropdown menu at the top of the page labeled ""Past 24 hours"" and change it to ""All time""
+6. Scroll down to reveal the information and identify the any posts that talk about supporting local book stores and the corresponding organizations that are mentioned","Based on the provided screenshots and actions, here is the updated Standard Operating Procedure.
+
+1. Click on the ""Forums"" link located in the red header at the top of the page.
+2. Click on the ""Alphabetical"" link located in the sub-header above the list of forums.
+3. Click on the link labeled ""books"" under the ""B"" section of the forum list. If the ""books"" link is not visible, scroll down the page until the ""B"" section appears.
+4. Click on the button labeled ""Hot"" (denoted with up/down arrows) located in the sorting menu above the list of posts.
+5. Click on the ""Top"" option in the dropdown menu.
+6. Click on the button labeled ""Past 24 hours"" (denoted with a clock icon) located in the sorting menu to the right of the ""Top"" button.
+7. Click on the ""All time"" option in the dropdown menu.
+8. Scroll down the page to ensure all of the top 10 posts are visible for review.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+0 @ 2023-12-25-15-10-58,0,"What is the top-1 best-selling product in 2022
+1. Click the ""Reports"" button on the left to open the menu.
+2. Click on ""Bestsellers"", which is located under the ""Products"" section.
+3. Click on the arrow to the right of the ""Period"" filter to open the dropdown.
+4. From the dropdown, click on the ""Year"" option.
+5. Click inside the empty box which is located to the right of the ""From"" filter.
+6. Type the first date of 2022, which is ""01/01/2022"".
+7. Click inside the empty box which is located to the right of the ""To"" filter.
+8. Type the last date of 2022, which is ""12/31/2022"".
+9. Click on the orange ""Show Report"" button located at the top right of the page.
+10. From the given information, state the top-1 best-selling product in 2022.","1. Click on the ""REPORTS"" menu item located in the left sidebar navigation pane.
+2. Click on the ""Bestsellers"" link located under the ""Products"" section in the Reports menu (if the link is not visible, scroll down inside the menu).
+3. Click on the ""Period"" dropdown menu located in the ""Filter"" section.
+4. Click on the ""Year"" option located in the ""Period"" dropdown menu.
+5. Click on the ""From"" date input field located in the ""Filter"" section.
+6. Type ""01/01/2022"" into the ""From"" date input field.
+7. Click on the ""To"" date input field located in the ""Filter"" section.
+8. Type ""12/31/2022"" into the ""To"" date input field.
+9. Click on the ""Show Report"" button located in the top right corner of the page.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+21 @ 2024-01-05-02-16-47,21,"List out reviewers, if exist, who mention about ear cups being small
+1. Navigate to the section on the product page that has the orange or white stars and click on the blue ""12 Reviews"" text right next to the stars
+2. Scroll down to find the reviews and locate the correct information to answer the question
+3. After reaching the end of the page, we see that there are multiple pages -- navigate to the second page by clicking on the blue ""2""
+4. Scroll down to find the reviews and locate the correct information to answer the question
+","1. Click on the ""12 Reviews"" link located to the right of the star rating in the product header section.
+2. Scroll down through the ""Customer Reviews"" section to identify any reviewers mentioning ""ear cups being small"".
+3. Click on the ""2"" button in the pagination controls located at the bottom of the ""Customer Reviews"" section. (Edge Case: If the ""2"" button is not visible, Scroll down to the bottom of the page).
+4. Scroll through the reviews on the second page to identify any remaining reviewers mentioning ""ear cups being small"".",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+194 @ 2024-01-13-06-23-00,194,"Get the total payment amount of the last 5 completed orders
+1. Click on the “SALES” button in the dark gray column on the left hand side of the page.
+2. Click on “Orders” in the pop up menu, located under the bolded heading “Sales”.
+3. Click the “Filters” button, located to the left of the “Default View” button.
+4. Click on the “Status” criteria box, located directly under the bolded text “Status”.
+5. Click “Complete” in the pop-up menu.
+6. Click the “Apply Filters” button, located near the bottom right of the screen.
+7. Click on the “Purchase Date” column header to sort the table from oldest to most recent.
+8. Click again on the “Purchase Date” column header to sort the table from most recent to oldest.
+9. Scroll down through the first 5 rows i.e. orders of the table, recording the total payment for each order.
+10. The “Grand Total (Purchased)” column of each row contains information on the total payment from each order.
+11. Sum these recorded values together.","Based on the provided screenshots and actions, here is the updated Standard Operating Procedure.
+
+1. Click on the ""SALES"" button located in the left sidebar navigation menu.
+2. Click on the ""Orders"" link located under the ""Sales"" section in the left sidebar.
+3. Click on the ""Filters"" button located above the orders table, to the left of the ""Default View"" button.
+4. Click on the ""Status"" dropdown menu located in the expanded filters section.
+5. Click on the ""Complete"" option in the ""Status"" dropdown list.
+6. Click on the ""Apply Filters"" button located at the bottom right of the filters section.
+7. Click on the ""Purchase Date"" column header in the table to sort the orders by date (this sets the sort to ascending).
+8. Click on the ""Purchase Date"" column header again to sort the orders by date descending (newest to oldest).
+9. Scroll down the table to view the ""Grand Total (Purchased)"" column for the first 5 rows.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+185 @ 2023-12-28-17-09-28,185,"Give me the brand of the products that have 3 units left
+1. Click the ""Catalog"" icon from the left sidebar.
+2. Click ""Products"", which is the first option in the dropdown.
+3. Click the gray ""Filters"" button near the top right.
+4. Click on the ""from"" box for Quantity.
+5. Type in ""3"".
+6. Click on the ""to"" box for Quantity.
+7. Type in ""3"".
+8. Press the ""Enter/Return"" key to execute the search.
+9. Given the information, state the brand of the products that have 3 units left.
+","1. Click on the ""CATALOG"" menu item in the left sidebar.
+2. Click on the ""Products"" link in the expanded menu.
+3. Click on the ""Filters"" button located above the product grid.
+4. Click on the text field labeled ""from"" under the ""Quantity"" section.
+5. Type ""3"".
+6. Click on the text field labeled ""to"" under the ""Quantity"" section.
+7. Type ""3"".
+8. Press the ""Enter"" key.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+162 @ 2024-01-08-02-53-13,162,"I have a lot of Nintendo Switch game cards now, help me find the best storage option to fit all 40 cards
+1. Click into the search bar, located at the top, right hand side of the page.
+2. Type “Nintendo Switch game card storage” into the search bar.
+3. Press enter. This finds products related to storage options for Nintendo Switch game cards.
+4. Scroll down to the first row of product search results.
+5. Click on the first product search result, “Game Card Holder Storage Case…”, since the third product search result has too little storage capacity (24 cards) and the second product search result likely has much more storage capacity than ideal (160 cards).
+6. Scroll down to the “Product Description” section of the page.
+7. This product is likely one of the best storage options for the user’s 40 game cards, since it is around the same price as other game card storage options and has an appropriate storage capacity (up to 40 game cards).","Based on the provided screenshots and actions, here is the updated Standard Operating Procedure.
+
+1. Click on the search text field labeled ""Search entire store here..."" located in the top right corner of the header.
+2. Type ""Nintendo Switch game card storage"".
+3. Press the ""Enter"" key.
+4. Scroll down to the search results section.
+5. Click on the link labeled ""Game Card Holder Storage Case for Nintendo Switch Games or PS Vita Game Case or SD Memory Cards, Black"". If you don't see the link, scroll down to find the row containing the product.
+6. Scroll down to the ""Product Description"" section located below the main product details.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+177 @ 2023-12-28-09-18-21,177,"Open my latest updated issue that has keyword ""homepage content"" in its title to check if it is closed
+1. Click the ""Issues"" icon located to the right of the plus sign icon.
+2. Click the tab under Issues called ""All"" (third tab from left).
+3. Click the search box at the top of the page.
+4. Type in the keyword ""homepage content"" and press enter.
+5. Click the first search result from the bottom that includes this keyword. The keyword should be in the bolded title.
+6. On this page, check if this issue is closed or not. This is your answer!","1. Click the ""Issues"" icon (displaying a count badge) located in the right-side cluster of the global navigation bar at the top of the page.
+2. Click the ""All"" tab located in the filter tab row under the ""Issues"" page heading.
+3. Click the filter text field located directly above the list of issues (this field may contain existing filters like ""Assignee = ..."").
+4. Type the text ""homepage content"" into the filter text field.
+5. Press the ""Enter"" key on the keyboard to submit the search.
+6. Click the link labeled ""Rethink the homepage's content"" located at the top of the search results list. (If the link is not immediately visible, Scroll down the list to find it).",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+62 @ 2023-12-26-23-59-25,62,"Which customer has completed the most number of orders in the entire history?
+1. Click on ""Reports"" in the left bar of the page.
+2. Click on ""Order Count"" under the ""Customers"" tab.
+3. In the ""From"" field, click on the calendar icon.
+4. From the calendar, click on the dropdown next to the year, and select the earliest year in the list, which is ""1923"".
+5. For the month, select January from the month dropdown.
+6. For the date, select 1, the first date in January.
+7. In the ""To"" field, click on the calender icon.
+8. Click on today's date.
+9. Click on the ""Show By"" dropdown.
+10. Click on ""Year"".
+11. Click on the ""Refresh"" button next to the filter list.
+12. From the displayed information, report the customer who has completed the most number of orders in the entire history.","Based on the provided screenshots and actions, here is the updated Standard Operating Procedure.
+
+1. Click on the ""REPORTS"" link in the sidebar on the left side of the page.
+2. Click on the ""Order Count"" link under the ""Customers"" section in the menu that appears.
+3. Click on the calendar icon located inside the ""From"" input field.
+4. Click on the month dropdown menu located in the header of the calendar widget.
+5. Click on the ""Jan"" option in the dropdown menu.
+6. Click on the year dropdown menu located in the header of the calendar widget.
+7. Scroll within the year dropdown menu until the earliest year, ""1923"", is visible.
+8. Click on the ""1923"" option in the dropdown menu.
+9. Click on the ""1"" link in the calendar grid to select the first day of the month.
+10. Click on the calendar icon located inside the ""To"" input field.
+11. Click on the number corresponding to the current date in the calendar grid.
+12. Click on the ""Show By"" dropdown menu next to the date fields.
+13. Click on the ""Year"" option in the dropdown menu.
+14. Click on the ""Refresh"" button located to the right of the filter settings.
+15. Scroll down to the report table to identify the customer in the first row, who represents the customer with the most orders.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+94 @ 2024-01-08-18-24-10,94,"Telll me the grand total of invoice 000000001.
+1. Click on 'SALES' in the left sidebar.
+2. Click on 'Invoices' in the popup window.
+3. Report the amount under the 'Grand Total (Purchased)' column for the first row which has 'Invoice' column value of 000000001.","Based on the provided workflow demonstration and the rubric guidelines, here is the updated Standard Operating Procedure.
+
+1. Click on the ""SALES"" menu item located in the left sidebar.
+2. Click on the ""Invoices"" link located in the ""Sales"" submenu (if the link is not visible, scroll down within the submenu).
+3. Scroll to the row containing ""000000001"" in the ""Invoice"" column within the ""Invoices"" table to view the ""Grand Total (Purchased)"" value.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+4 @ 2023-12-25-17-18-04,4,"What are the top-3 best-selling product in Jan 2023
+1. On the left bar, click on the ""Reports"" button.
+2. Under the ""Products"" header, click on ""Bestsellers"".
+3. Click on the down arrow next to the ""Period"" field.
+4. Click on ""Month"" in the dropdown.
+5. Click in the box next to the ""From"" field.
+6. Enter the first date of Jan 2023, which is 01/01/2023.
+7. Click in the box next to the ""To"" field.
+8. Enter the last date of Jan 2023, which is 01/31/2023.
+9. Click on the ""Show Report"" button on the top right side of the page.
+10. From the table shown, report the top-3 best-selling product in Jan 2023.","Based on the workflow demonstration and the SOP Rubric, here is the updated Standard Operating Procedure.
+
+1. Click on the ""Reports"" icon located on the left sidebar navigation.
+2. Click on the ""Bestsellers"" link under the ""Products"" header in the ""Reports"" menu.
+3. Click on the ""Period"" dropdown menu located in the ""Filter"" section.
+4. Click on the ""Month"" option within the ""Period"" dropdown list.
+5. Click on the ""From"" text field located in the ""Filter"" section.
+6. Type the start date ""01/01/2023"" into the ""From"" text field.
+7. Click on the ""To"" text field located in the ""Filter"" section.
+8. Type the end date ""01/31/2023"" into the ""To"" text field.
+9. Click on the ""Show Report"" button located at the top right corner of the page.
+10. Scroll down the page until the results table is visible to identify the best-selling products. (If the table is already visible, this step can be skipped).",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+44 @ 2024-01-05-03-59-01,44,"Check out my todos
+1. Locate and click on the checkbox icon (third to right icon) on the top purple header of the screen
+2. Scroll down to reveal the todos","Here is the updated Standard Operating Procedure for the ""Check out my todos"" workflow.
+
+1. Click the ""Todos"" icon (depicted as a square with a checkmark inside, often with a number badge) located on the right side of the top purple navigation bar.
+    *   *Edge Case:* If you cannot distinguish the icon, it is located immediately to the left of the question mark (?) icon.
+2. Scroll down the ""To-Do List"" page to view the list of assigned items.
+    *   *Edge Case:* If the list of items extends beyond the visible screen area, continue scrolling until you have reviewed all entries.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+133 @ 2024-01-14-06-02-33,133,"How many commits did Eric make to a11yproject on 3/2?
+1. Click into the search bar located at the top left of the page, with a purple background.
+2. Type in the name of the desired repository.
+3. Press enter.
+4. Click on the name of the relevant search result, i.e. the name of the desired repository.
+5. Click on “Commits”, located directly below the repository icon.
+6. Scroll down until you see commits that occurred at the desired date (3/2). There will potentially be no such commits, which you will be able to tell if there are no commits listed for the desired date, but there commits listed for dates before and after the desired date.
+7. Record how many commits on that date are made by the user of interest, if there are any commits made on that date at all. The user can be identified by their name, which is located to the right of the profile picture for each commit.","1. **Click** on the text field labeled ""Search GitLab"" located in the top navigation bar.
+2. **Type** ""a11yproject"" into the ""Search GitLab"" text field.
+3. **Press** the ""Enter"" key.
+4. **Click** on the text labeled ""The A11Y Project / a11yproject.com"" located in the search results list. (Edge Case: If this project is not visible immediately, scroll down the search results page).
+5. **Click** on the link indicating the commit count (e.g., ""2,320 Commits"") located directly under the project title ""a11yproject.com"". (Edge Case: If the commit count link is not visible, scroll up to the top of the project overview section).
+6. **Scroll** down the list of commits until the section for the date ""02 Mar, 2023"" is visible to identify commits authored by ""Eric"". (Edge Case: If you do not see the specific date, ensure you have not scrolled past it by checking the dates immediately preceding and following the target date).",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+5 @ 2024-01-05-02-02-06,5,"What is the top-1 best-selling product type in Jan 2023
+1. Navigate to the sidebar located on the left side of the screen
+2. Click on the ""Reports"" section to reveal the pop-out menu
+3. Click on the ""Bestsellers"" button in the ""Products"" section of the pop-out menu, to reveal the ""Bestsellers Report"" page
+4. Locate the ""Period"" section on the page, and click on the dropdown menu, and click on ""Day"" to set the period as Day
+5. Click on the ""From"" textbox and type in the first day of our timeframe: 01/01/2022
+6. Click on the ""To"" textbox and type in the last day of our timeframe: 12/31/2022
+7. Click on the orange ""Show Report"" button which can be found on the top right of the page
+8. Scroll down to find the report and locate the correct information to answer the question","Here is the updated Standard Operating Procedure based on the workflow demonstration and the provided rubric.
+
+1. Click on the ""REPORTS"" link located in the sidebar on the left side of the screen.
+2. Click on the ""Bestsellers"" link under the ""Products"" section of the pop-out menu.
+3. Click on the ""From"" text field located in the ""Filter"" section of the ""Bestsellers Report"" page.
+4. Type the start date ""01/01/2023"" into the ""From"" text field. (If there is existing text, delete it before typing).
+5. Click on the ""To"" text field located in the ""Filter"" section.
+6. Type the end date ""01/31/2023"" into the ""To"" text field. (If there is existing text, delete it before typing).
+7. Click on the orange ""Show Report"" button located in the top right corner of the page.
+8. Scroll down to the ""Bestsellers Report"" table to locate the top-1 best-selling product type for the specified period. (If the table is empty, verify the date range is correct).",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+228 @ 2023-12-26-22-02-47,228,"What is the price range for products from sephora?
+1. Click on ""Advanced Search"".
+2. Click on the empty text box for ""Product Name"".
+3. Type in ""sephora"".
+4. Click the blue ""Search"" button below.
+5. Click on option for ""Sort by"" to open the dropdown menu.
+6. Select ""Price"" from the dropdown menu.
+7. Record the lowest price for an item from ""sephora"", then click the arrow next to the ""Sort by"" button to ""Set Descending Direction"" for price.
+8. From the collected information, report the price range for products from sephora.","Based on the provided screenshots, actions, and the SOP Rubric, here is the updated Standard Operating Procedure.
+
+1. Click on the ""Advanced Search"" link located directly below the main search bar in the top right section of the header.
+2. Click on the ""Product Name"" text field located within the ""Search Settings"" section.
+3. Type ""sephora"" into the ""Product Name"" text field.
+4. Click on the blue ""Search"" button located at the bottom of the ""Search Settings"" form.
+5. Click on the ""Sort By"" dropdown menu located above the product results grid on the right-hand side.
+6. Click on the ""Price"" option within the dropdown menu to sort the items. (Note: This defaults to ascending order, displaying the lowest price first).
+7. Click on the arrow icon located immediately to the right of the ""Sort By"" dropdown menu to toggle the sort direction to descending (displaying the highest price first).",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+203 @ 2024-01-13-06-37-19,203,"Get the purchase date and order id of the most recent pending order
+1. Click on the “SALES” button in the dark gray column on the left hand side of the page.
+2. Click on “Orders” in the pop up menu, located under the bolded heading “Sales”.
+3. Click the “Filters” button, located to the left of the “Default View” button.
+4. Click on the “Status” criteria box, located directly under the bolded text “Status”.
+5. Click “Pending” in the pop-up menu.
+6. Click the “Apply Filters” button, located near the bottom right of the screen.
+7. Click on the “Purchase Date” column header to sort the table from oldest to most recent.
+8. Click again on the “Purchase Date” column header to sort the table from most recent to oldest.
+9. Get the purchase date and order id from the most recent pending order. The “Purchase Date” column of each row contains information on the date of the order. The “ID” column of each row contains information on the order id of each order. The first row is the most recent pending order.","1. Click on the ""SALES"" button located in the dark gray navigation sidebar on the left side of the screen.
+2. Click on the ""Orders"" link located under the ""Sales"" heading in the sub-menu that appears.
+3. Click on the ""Filters"" button located above the order grid, to the left of the ""Default View"" button.
+    *   *Edge Case:* If the filter criteria fields (such as ""Purchase Date"" and ""Status"") are already visible, skip this step.
+4. Click on the ""Status"" input field located under the bolded ""Status"" label in the filters section.
+5. Click on the ""Pending"" option located in the dropdown menu.
+    *   *Edge Case:* If the ""Pending"" option is not visible, scroll down within the dropdown menu to find it.
+6. Click on the ""Apply Filters"" button located in the bottom right corner of the filters section.
+7. Click on the ""Purchase Date"" column header located in the top row of the order table.
+    *   *Edge Case:* If the ""Purchase Date"" column is already sorted in ascending order (indicated by an upward-pointing arrow next to the header), skip this step. If it is already sorted in descending order (indicated by a downward-pointing arrow), skip this step and the next step.
+8. Click on the ""Purchase Date"" column header located in the top row of the order table.
+    *   *Edge Case:* If the ""Purchase Date"" column is already sorted in descending order (indicated by a downward-pointing arrow), skip this step. This ensures the table is sorted from newest to oldest.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+147 @ 2024-01-08-02-17-03,147,"What is the size configuration of the picture frame I bought 2022
+1. Click on the blue text ""My Account"" at the top of the page.
+2. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+3. Scroll down to the next page button for the order table, located directly below the order table and to the right of the page numbers.
+4. Click the next page button.
+5. Scroll down to the next page button for the order table, located directly below the order table and to the right of the page numbers.
+6. Click the next page button.
+7. Scroll down to the next page button for the order table, located directly below the order table and to the right of the page numbers.
+8. Click the next page button.
+9. Click the blue text “View Order” in the “Action” column of the row of the order placed on 12/18/22.
+10. Scroll through all items in the order.
+11. Since there are no picture frame items, we will move on to the next order.
+12. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+13. Scroll down to the page numbers for the order table, located directly below the order table.
+14. Click “3” in the order table page numbers.
+15. Click the blue text “View Order” in the “Action” column of the row of the order placed on 12/14/22.
+16. Scroll through all items in the order.
+17. Since there are no picture frame items, we will move on to the next order.
+18. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+19. Scroll down to the page numbers for the order table, located directly below the order table.
+20. Click “3” in the order table page numbers.
+21. Click the blue text “View Order” in the “Action” column of the row of the order placed on 12/12/22.
+22. Since there are no picture frame items, we will move on to the next order.
+23. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+24. Scroll down to the page numbers for the order table, located directly below the order table.
+25. Click “3” in the order table page numbers.
+26. Click the blue text “View Order” in the “Action” column of the row of the order placed on 12/4/22.
+27. Scroll through all items in the order.
+28. Since there are no picture frame items, we will move on to the next order.
+29. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+30. Scroll down to the page numbers for the order table, located directly below the order table.
+31. Click “3” in the order table page numbers.
+32. Click the blue text “View Order” in the “Action” column of the row of the order placed on 11/26/22.
+33. Scroll through all items in the order.
+34. Since there are no picture frame items, we will move on to the next order.
+35. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+36. Scroll down to the page numbers for the order table, located directly below the order table.
+37. Click “4” in the order table page numbers.
+38. Click the blue text “View Order” in the “Action” column of the row of the order placed on 11/20/22.
+39. Scroll through all items in the order.
+40. Since there are no picture frame items, we will move on to the next order.
+41. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+42. Scroll down to the page numbers for the order table, located directly below the order table.
+43. Click “4” in the order table page numbers.
+44. Click the blue text “View Order” in the “Action” column of the row of the order placed on 11/11/22.
+45. Scroll through all items in the order.
+46. Since there are no picture frame items, we will move on to the next order.
+47. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+48. Scroll down to the page numbers for the order table, located directly below the order table.
+49. Click “4” in the order table page numbers.
+50. Click the blue text “View Order” in the “Action” column of the row of the order placed on 10/22/22.
+51. Scroll through all items in the order.
+52. Since there are no picture frame items, we will move on to the next order.
+53. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+54. Scroll down to the page numbers for the order table, located directly below the order table.
+55. Click “4” in the order table page numbers.
+56. Click the blue text “View Order” in the “Action” column of the row of the order placed on 10/21/22.
+57. Scroll through all items in the order.
+58. Since there are no picture frame items, we will move on to the next order.
+59. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+60. Scroll down to the page numbers for the order table, located directly below the order table.
+61. Click “4” in the order table page numbers.
+62. Click the blue text “View Order” in the “Action” column of the row of the order placed on 10/18/22.
+63. Scroll through all items in the order.
+64. Since there are no picture frame items, we will move on to the next order.
+65. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+66. Scroll down to the page numbers for the order table, located directly below the order table.
+67. Click “4” in the order table page numbers.
+68. Click the blue text “View Order” in the “Action” column of the row of the order placed on 10/3/22.
+69. Scroll through all items in the order.
+70. Since there are no picture frame items, we will move on to the next order.
+71. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+72. Scroll down to the page numbers for the order table, located directly below the order table.
+73. Click “4” in the order table page numbers.
+74. Click the blue text “View Order” in the “Action” column of the row of the order placed on 9/29/22.
+75. Scroll through all items in the order.
+76. Since there are no picture frame items, we will move on to the next order.
+77. Click on the ""My Orders"" tab in the light gray column on the leftmost side of the page.
+78. Scroll down to the page numbers for the order table, located directly below the order table.
+79. Click “4” in the order table page numbers.
+80. Click the blue text “View Order” in the “Action” column of the row of the order placed on 9/1/22.
+81. Scroll through items in the order.
+82. The desired information is in the item description for the “Forest Canvas Wall Art Print…”, which contains the size configuration of the item.","1. Click on the ""My Account"" link in the header section at the top of the page.
+2. Click on the ""My Orders"" link in the sidebar menu on the left side of the page.
+3. Scroll down to the pagination controls located below the order table.
+4. Click on the ""Next"" page button (right arrow icon) in the pagination controls.
+5. Scroll down to the pagination controls located below the order table.
+6. Click on the ""Next"" page button (right arrow icon) in the pagination controls to navigate to page 3.
+7. Click on the ""View Order"" link in the ""Action"" column for the order dated 12/18/22.
+8. Scroll down to the ""Items Ordered"" section to inspect the items for the picture frame.
+9. Click on the ""My Orders"" link in the sidebar menu on the left side of the page.
+10. Scroll down to the pagination controls located below the order table.
+11. Click on the page number ""3"" button in the pagination controls.
+12. Click on the ""View Order"" link in the ""Action"" column for the order dated 12/14/22.
+13. Scroll down to the ""Items Ordered"" section to inspect the items for the picture frame.
+14. Click on the ""My Orders"" link in the sidebar menu on the left side of the page.
+15. Scroll down to the pagination controls located below the order table.
+16. Click on the page number ""3"" button in the pagination controls.
+17. Click on the ""View Order"" link in the ""Action"" column for the order dated 12/12/22.
+18. Scroll down to the ""Items Ordered"" section to inspect the items for the picture frame.
+19. Click on the ""My Orders"" link in the sidebar menu on the left side of the page.
+20. Scroll down to the pagination controls located below the order table.
+21. Click on the page number ""3"" button in the pagination controls.
+22. Click on the ""View Order"" link in the ""Action"" column for the order dated 12/4/22.
+23. Scroll down to the ""Items Ordered"" section to inspect the items for the picture frame.
+24. Click on the ""My Orders"" link in the sidebar menu on the left side of the page.
+25. Scroll down to the pagination controls located below the order table.
+26. Click on the page number ""3"" button in the pagination controls.
+27. Click on the ""View Order"" link in the ""Action"" column for the order dated 11/26/22.
+28. Scroll down to the ""Items Ordered"" section to inspect the items for the picture frame.
+29. Click on the ""My Orders"" link in the sidebar menu on the left side of the page.
+30. Scroll down to the pagination controls located below the order table.
+31. Click on the page number ""4"" button in the pagination controls.
+32. Click on the ""View Order"" link in the ""Action"" column for the order dated 11/20/22.
+33. Scroll down to the ""Items Ordered"" section to inspect the items for the picture frame.
+34. Click on the ""My Orders"" link in the sidebar menu on the left side of the page.
+35. Scroll down to the pagination controls located below the order table.
+36. Click on the page number ""4"" button in the pagination controls.
+37. Click on the ""View Order"" link in the ""Action"" column for the order dated 11/11/22.
+38. Scroll down to the ""Items Ordered"" section to inspect the items for the picture frame.
+39. Click on the ""My Orders"" link in the sidebar menu on the left side of the page.
+40. Scroll down to the pagination controls located below the order table.
+41. Click on the page number ""4"" button in the pagination controls.
+42. Click on the ""View Order"" link in the ""Action"" column for the order dated 10/22/22.
+43. Scroll down to the ""Items Ordered"" section to inspect the items for the picture frame.
+44. Click on the ""My Orders"" link in the sidebar menu on the left side of the page.
+45. Scroll down to the pagination controls located below the order table.
+46. Click on the page number ""4"" button in the pagination controls.
+47. Click on the ""View Order"" link in the ""Action"" column for the order dated 10/21/22.
+48. Scroll down to the ""Items Ordered"" section to inspect the items for the picture frame.
+49. Click on the ""My Orders"" link in the sidebar menu on the left side of the page.
+50. Scroll down to the pagination controls located below the order table.
+51. Click on the page number ""4"" button in the pagination controls.
+52. Click on the ""View Order"" link in the ""Action"" column for the order dated 10/18/22.
+53. Scroll down to the ""Items Ordered"" section to inspect the items for the picture frame.
+54. Click on the ""My Orders"" link in the sidebar menu on the left side of the page.
+55. Scroll down to the pagination controls located below the order table.
+56. Click on the page number ""4"" button in the pagination controls.
+57. Click on the ""View Order"" link in the ""Action"" column for the order dated 10/3/22.
+58. Scroll down to the ""Items Ordered"" section to inspect the items for the picture frame.
+59. Click on the ""My Orders"" link in the sidebar menu on the left side of the page.
+60. Scroll down to the pagination controls located below the order table.
+61. Click on the page number ""4"" button in the pagination controls.
+62. Click on the ""View Order"" link in the ""Action"" column for the order dated 9/29/22.
+63. Scroll down to the ""Items Ordered"" section to inspect the items for the picture frame.
+64. Click on the ""My Orders"" link in the sidebar menu on the left side of the page.
+65. Scroll down to the pagination controls located below the order table.
+66. Click on the page number ""4"" button in the pagination controls.
+67. Click on the ""View Order"" link in the ""Action"" column for the order dated 9/1/22.
+68. Scroll down to the ""Items Ordered"" section to find the ""Forest Canvas Wall Art Print"" and read its description to find the size configuration.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+47 @ 2023-12-31-18-24-54,47,"Today is 6/12/2023. Tell me how many fulfilled orders I have over the past month, and the total amount of money I spent.
+1. Click the first blue option from the very top ""My Account"".
+2. From the left sidebar, click the second option ""My Orders"".
+3. Given the information, state how many fulfilled orders I have over the past month, and the total amount of money I spent, assuming today is 6/12/2023.","Based on the demonstrated workflow and the SOP Rubric, here is the updated Standard Operating Procedure. 
+
+1. Click on the link labeled ""My Account"" located in the header at the top right of the page.
+2. Click on the link labeled ""My Orders"" located in the sidebar menu on the left side of the page.
+3. Scroll down to the ""My Orders"" table in the main content area to view the ""Date"", ""Order Total"", and ""Status"" columns for orders from the past month.
+4. Click on the ""Next"" page button (right arrow) located at the bottom right of the table if the orders from the past month are not visible on the current page.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+114 @ 2024-01-13-05-31-58,114,"Show me the customers who have expressed dissatisfaction with Antonia racer tank?
+1. Click on the “CATALOG” button in the dark gray column on the left hand side of the page.
+2. Click on “Products” in the pop up menu, located under the bolded heading “Catalog”.
+3. Click into the search box, located above the products table.
+4. Type in “Antonia racer tank”.
+5. Press enter.
+6. Click on the product name of the relevant product. The product name is located in the “Name” column of the given row.
+7. Scroll down to the “Product Reviews” section.
+8. Click on the “Product Reviews” section to expand its contents.
+9. Scroll down to view all reviews.
+10. The reviews that express dissatisfaction can be found in this reviews table. Expressions of dissatisfaction can be found in the meaning of text in the “Title” and “Review” columns of a given row.
+11. Since a review of interest by a user with a nickname doesn’t include their full name, we will try to find this user’s full name.
+12. Click on the blue text “Edit”, located in the rightmost column of the row containing the review of interest.
+13. The user’s full name is not displayed. Hence, we will simply record their nickname, located in the box directly to the right of the bolded text “Nickname”.
+14. Click on the “Back” button, located near the top of the page and directly to the left of the “Delete Review” button.
+15. Scroll down to the “Product Reviews” section.
+16. Click on the “Product Reviews” section to expand its contents.
+17. Scroll down to view all reviews.
+18. Since a review of interest by a user with a nickname doesn’t include their full name, we will try to find this user’s full name.
+19. Click on the blue text “Edit”, located in the rightmost column of the row containing the review of interest.
+20. The user’s full name is not displayed. Hence, we will simply record their nickname, located in the box directly to the right of the bolded text “Nickname”.","Based on the provided screenshots and actions, here is the improved Standard Operating Procedure (SOP).
+
+1. Click on the ""CATALOG"" menu item located in the left sidebar navigation.
+2. Click on the ""Products"" link located in the ""CATALOG"" submenu.
+3. Click on the text field labeled ""Search by keyword"" located above the product data grid.
+4. Type ""Antonia racer tank"" into the text field.
+5. Press the ""Enter"" key on the keyboard to submit the search.
+6. Click on the text ""Antonia Racer Tank"" located in the ""Name"" column of the search results row.
+7. Scroll down the page until the ""Product Reviews"" section header is visible.
+8. Click on the ""Product Reviews"" section header to expand the list of reviews.
+    *   *Edge Case:* If the section is already expanded (contents are visible), skip this step.
+9. Click on the ""Edit"" link located in the ""Action"" column for the review with the title ""Zero support/modesty"".
+    *   *Relevance:* This step allows you to view the details of the first customer who expressed dissatisfaction.
+10. Click on the ""Back"" button located at the top left of the ""Edit Review"" page to return to the product details.
+11. Scroll down the page until the ""Product Reviews"" section header is visible.
+12. Click on the ""Product Reviews"" section header to expand the list of reviews.
+    *   *Edge Case:* If the section is already expanded (contents are visible), skip this step.
+13. Click on the ""Edit"" link located in the ""Action"" column for the review with the title ""Not for high impact"".
+    *   *Relevance:* This step allows you to view the details of the second customer who expressed dissatisfaction.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+118 @ 2024-01-08-01-14-57,118,"I have jaw bruxism problem, show me something that could alleviate the problem.
+1. Click into the search bar, located at the top, right hand side of the page.
+2. Type “jaw bruxism” into the search bar.
+3. Press enter. This finds products related to jaw bruxism.
+4. Click on the first product in the search results, “AKwell Anti Teeth-Grinding dental guard...”, which could potentially alleviate a jaw bruxism problem.","1. Click on the search bar labeled ""Search entire store here..."" located in the top right corner of the page header.
+2. Type ""jaw bruxism"" into the search bar.
+3. Press the ""Enter"" key on the keyboard.
+4. Click on the image of the first product displayed in the search results grid (e.g., ""AKwell Anti Teeth-Grinding Dental Guard""). (If you do not see the product grid, scroll down to the section titled ""Search results for: 'jaw bruxism'"").",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+1 @ 2023-12-25-15-44-04,1,"What is the top-1 best-selling brand in Quarter 1 2022
+1. Click the ""Reports"" button on the left to open the menu.
+2. Click on ""Bestsellers"", which is located under the ""Products"" section.
+3. Click inside the empty box which is located to the right of the ""From"" filter.
+4. Type the first date of Quarter 1 2022, which is ""01/01/2022"".
+5. Click inside the empty box which is located to the right of the ""To"" filter.
+6. Type the last date of Quarter 1 2022, which is ""03/31/2022"".
+7. Click on the orange ""Show Report"" button located at the top right of the page.
+8. Scroll down so all information is visible.
+9. From the given information, state the top-1 best-selling brand in Quarter 1 2022.","1. Click on the icon labeled ""REPORTS"" located in the dark gray sidebar on the left side of the screen.
+2. Click on the link labeled ""Bestsellers"" located under the ""Products"" section in the menu that appears.
+3. Click on the text input field located immediately to the right of the ""From"" label in the ""Filter"" section.
+4. Type ""01/01/2022"" into the ""From"" text input field.
+5. Click on the text input field located immediately to the right of the ""To"" label in the ""Filter"" section.
+6. Type ""03/31/2022"" into the ""To"" text input field.
+7. Click on the orange button labeled ""Show Report"" located in the top right corner of the page. (Edge Case: If you do not see the button, scroll up to the top of the page).
+8. Scroll down the page until the list of products in the report table is fully visible to identify the best-selling brand.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+42 @ 2024-01-13-05-03-47,42,"List the top 2 search terms in my store
+1. Scroll down to the bottom of the page.
+2. Observe the table with the bolded title “Top Search Terms”.
+3. The words in the first and second rows of the table, located in the “Search Term” column of the table, are the top 2 search terms in the user’s store.","1. Scroll down the ""Dashboard"" page until the ""Top Search Terms"" table is visible.
+*Edge Case: If you do not see the ""Top Search Terms"" table, ensure you have scrolled past the ""Last Search Terms"" table located above it.*",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+235 @ 2024-01-01-00-13-13,235,"Get the order number of my most recent  order 
+1. Click on the blue ""My Account"" button on the top right of the page.
+2. On the left gray sidebar menu, click on ""My Orders"".
+3. Look at the value under the ""Order #"" column for the first row.","Based on the provided screenshots and actions, here is the updated Standard Operating Procedure.
+
+1. Click on the ""My Account"" link located in the header at the top right of the page. (Edge Case: if you don't see the ""My Account"" link, scroll to the top of the page).
+2. Click on the ""My Orders"" link located in the sidebar menu on the left side of the page. (Edge Case: if you don't see the ""My Orders"" link, scroll down to find it in the sidebar).
+3. Scroll to the ""Order #"" column in the first row of the ""My Orders"" table to view the most recent order number. (Edge Case: if you don't see the table, scroll down the page).",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+163 @ 2024-01-13-17-57-52,163,"What are the main criticisms of this product? Please extract the relevant sentences.
+1. Click on '12 Reviews' below the product name to see reviews.
+2. Scroll down and extract sentences from reviews which convey criticisms.
+3. Click on the '>' button to see remaining reviews.
+4. Extract sentences from reviews which convey criticisms.
+5. Report the sentences extracted.
+","Based on the workflow demonstration and the provided rubric, here is the updated Standard Operating Procedure.
+
+1. Click on the link labeled with the review count (e.g., ""12 Reviews"") located next to the star rating and ""IN STOCK"" label.
+2. Scroll down to the bottom of the ""Customer Reviews"" section.
+3. If the ""Page Next"" button is visible, Click on the ""Page Next"" link (represented by a "">"" icon) located in the pagination controls below the reviews list.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+63 @ 2023-12-27-00-04-48,63,"Which customer(s) has completed the second most number of orders in the entire history?
+1. Click on ""Reports"" in the left bar of the page.
+2. Click on ""Order Count"" under the ""Customers"" tab.
+3. In the ""From"" field, click on the calendar icon.
+4. From the calendar, click on the dropdown next to the year, and select the earliest year in the list, which is ""1923"".
+5. For the month, select January from the month dropdown.
+6. For the date, select 1, the first date in January.
+7. In the ""To"" field, click on the calender icon.
+8. Click on today's date.
+9. Click on the ""Show By"" dropdown.
+10. Click on ""Year"".
+11. Click on the ""Refresh"" button next to the filter list.
+12. From the displayed information, report the customer(s) who has completed the second most number of orders in the entire history.","Based on the provided screenshots and workflow demonstration, here is the updated Standard Operating Procedure.
+
+1. Click on the ""Reports"" icon in the sidebar on the left side of the page.
+2. Click on the ""Order Count"" link under the ""Customers"" section.
+3. Click on the calendar icon on the right side of the ""From"" input field.
+4. Click on the month selection dropdown menu within the calendar widget.
+5. Click on the ""Jan"" option in the dropdown menu.
+6. Click on the year selection dropdown menu within the calendar widget.
+7. Scroll up within the year dropdown list if ""1923"" is not immediately visible.
+8. Click on the ""1923"" option in the year dropdown list.
+9. Click on the number ""1"" in the calendar grid to select the first day of the month.
+10. Click on the calendar icon on the right side of the ""To"" input field.
+11. Click on the tile representing today's date in the calendar grid.
+12. Click on the ""Show By"" dropdown menu.
+13. Click on the ""Year"" option in the dropdown menu.
+14. Click on the ""Refresh"" button located to the right of the filter settings.
+15. Scroll down the page past the ""Interval"" records until the list of customers is visible.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+125 @ 2023-12-27-12-53-48,125,"What is the price range of teeth grinding mouth guard in the One Stop Market?
+1. Click the blue ""Advanced Search"" button located under the larger search bar on the top right of the page.
+2. Enter ""mouth guard"" in the ""Product Name"" box.
+3. Enter ""teeth grinding"" in the ""Description"" box
+4. Click the blue ""Search"" button.
+5. Select the ""Sort By"" box and click ""Price"" on the dropdown.
+6. The price under the first item (bolded text, above the blue ""Add to Cart"" button) is the lower bound of the price range.
+7. Click the up arrow (located on the right of the sort by box) to switch it to a down arrow.
+8. The price under the first item (bolded text, above the blue ""Add to Cart"" button) is the upper bound of the price range.","Based on the detailed analysis of the workflow and the specific constraints of the SOP Rubric, here is the updated Standard Operating Procedure.
+
+1. Click on the link labeled ""Advanced Search"" located below the search bar in the top right header.
+2. Click on the text field labeled ""Product Name"" under the ""Search Settings"" section.
+3. Type ""mouth guard"" into the ""Product Name"" text field.
+4. Click on the text field labeled ""Description"" under the ""Search Settings"" section.
+5. Type ""teeth grinding"" into the ""Description"" text field.
+6. Click on the blue ""Search"" button located at the bottom of the ""Search Settings"" form.
+7. Click on the ""Sort By"" dropdown menu located above the product list on the right side of the page.
+8. Click on the ""Price"" option within the dropdown menu. (Note: The first item listed now represents the lower bound of the price range).
+9. Click on the arrow icon (link labeled ""Set Descending Direction"") located to the immediate right of the ""Sort By"" dropdown menu. (Note: The first item listed now represents the upper bound of the price range).",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+3 @ 2023-12-25-15-31-51,3,"What are the top-2 best-selling product in 2022
+1. Click the ""Reports"" button on the left to open the menu.
+2. Click on ""Bestsellers"", which is located under the ""Products"" section.
+3. Click on the arrow to the right of the ""Period"" filter to open the dropdown.
+4. From the dropdown, click on the ""Year"" option.
+5. Click inside the empty box which is located to the right of the ""From"" filter.
+6. Type the first date of 2022, which is ""01/01/2022"".
+7. Click inside the empty box which is located to the right of the ""To"" filter.
+8. Type the last date of 2022, which is ""12/31/2022"".
+9. Click on the orange ""Show Report"" button located at the top right of the page.
+10. From the given information, state the top-2 best-selling products in 2022.","Based on the provided workflow demonstration and the Standard Operating Procedure rubric, here is the updated and improved SOP.
+
+1. Click on the ""REPORTS"" menu item located in the left-hand navigation sidebar.
+2. Click on the ""Bestsellers"" link located under the ""Products"" section in the expanded menu.
+3. Click on the ""Period"" dropdown menu located in the ""Filter"" section at the top of the page.
+4. Click on the ""Year"" option within the ""Period"" dropdown list.
+5. Click on the input field located to the right of the ""From"" label in the ""Filter"" section.
+6. Type ""01/01/2022"" into the ""From"" input field.
+7. Click on the input field located to the right of the ""To"" label in the ""Filter"" section.
+8. Type ""12/31/2022"" into the ""To"" input field.
+9. Click on the orange ""Show Report"" button located in the top-right corner of the page.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+240 @ 2024-01-08-03-34-34,240,"I am doing a market survey for one stop market, show me the most expensive product from competative swimwear category
+1. Click on the ""Clothing, Shoes & Jewelry"" category, located in the top third of the page and in the first row of product categories.
+2. Click on the blue text ""Sport Specific Clothing"", located on the left hand side of the page under the bolded text “Shopping Options” and “Category”.
+3. Click on the blue text ""Competitive Swimwear"", located on the left hand side of the page under the bolded text “Shopping Options” and “Category”.
+4. Click the “Sort By” criteria, located on the right hand side of the page.
+5. Click “Price” in the pop up menu.
+6. Click the gray upward arrow directly to the right of the “Sort By” criteria. This sorts search results from highest to lowest price.
+7. Scroll down to the first row of product search results.
+8. Click on the first product in the first row of search results
+9. The first product in the first row of search results is the most expensive product in the competitive swimwear category.","Based on the workflow demonstration and the rubric provided, here is the improved Standard Operating Procedure.
+
+1. Click on the ""Clothing, Shoes & Jewelry"" link located in the main navigation bar at the top of the page.
+2. Click on the ""Sport Specific Clothing"" link located on the left sidebar under the ""Shopping Options"" and ""Category"" headers.
+3. Click on the ""Competitive Swimwear"" link located on the left sidebar under the ""Shopping Options"" and ""Category"" headers.
+4. Click on the ""Sort By"" dropdown menu located at the top right of the product results grid.
+5. Click on the ""Price"" option within the dropdown menu.
+6. Click on the sort direction arrow icon located immediately to the right of the ""Sort By"" dropdown menu to set the sort order to descending (arrow pointing down).
+    *   *Edge Case: If the arrow is already pointing down (indicating high-to-low price sorting), skip this step.*
+7. Scroll down until the first row of products in the search results is fully visible.
+8. Click on the image or title of the first product listed in the search results.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+212 @ 2023-12-31-15-14-14,212,"Find the customer name and email with phone number 555-229-3326.
+1. Click on the ""Customers"" icon on the gray sidebar on the left side of the screen.
+2. Click on ""All Customers"" in the submenu.
+3. Click on the gray ""Filters"" button on the top right of the page.
+4. Click in the empty box on the left located under the text ""Phone"".
+5. Enter in the phone number ""(555) 229-3326"" and press enter.
+6. The name and email are in the respective columns for the returned row.","1. Click on the ""CUSTOMERS"" menu item located in the gray sidebar on the left side of the screen.
+2. Click on the ""All Customers"" link in the submenu that appears.
+3. Click on the ""Filters"" button located above the customer list on the right side of the screen. (Note: If the filter options are already expanded and visible, skip this step).
+4. Click on the text input field located under the ""Phone"" label in the filters section.
+5. Type ""(555) 229-3326"" into the text input field.
+6. Click on the ""Apply Filters"" button located in the bottom right corner of the filters section. (Note: If you don't see the button, scroll down until it is visible).",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
+107 @ 2024-01-13-05-19-45,107,"Presents the monthly count of successful orders from May to December 2022 in MM:COUNT format
+1. Click on the “REPORTS” button in the dark gray column on the left hand side of the page.
+2. Click on “Orders” in the pop up menu, located under the heading “Sales”.
+3. Click on the Period box, located directly to the right of the bolded text “Period”.
+4. Click on “Month” in the pop-up menu.
+5. Click into the “From” text field, located on the left side of the page.
+6. Type in “5/1/22”.
+7. Click into the “To” text field, located directly to the right of the “From” text field.
+8. Type in “12/31/22”.
+9. Click on the orange button “Show Report”, located at the top right of the page.
+10. Scroll down through all records. Keep track of how many successful orders were made each month. The month name is located in the first column of the data table. The number of orders made in that month is given in the second column of the data table.","1. Click on the ""REPORTS"" icon (resembling a bar chart) located in the dark gray sidebar on the left side of the page.
+2. Click on the text labeled ""Orders"", located under the ""Sales"" heading in the menu that appears.
+3. Click on the dropdown menu labeled ""Period"", located in the ""Filter"" section.
+4. Click on the ""Month"" option in the dropdown menu.
+5. Click on the text field labeled ""From"", located in the ""Filter"" section.
+6. Type ""5/1/22"". (Edge Case: If a calendar pop-up appears, you can ignore it and type directly into the field).
+7. Click on the text field labeled ""To"", located in the ""Filter"" section (typically below the ""From"" field).
+8. Type ""12/31/22"".
+9. Click on the orange button labeled ""Show Report"", located in the top right corner of the page.
+10. Scroll down to the ""records found"" table at the bottom of the page to view the ""Interval"" (Month) and ""Orders"" (Count) columns.",1,1,True,True,True,gemini-3-pro-preview,1--True--True--True--gemini-3-pro-preview
